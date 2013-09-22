@@ -1,0 +1,2420 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<diff>
+	<exe>
+		<builddate>1373362562</builddate>
+		<filename>2013-07-10bRagexe.exe</filename>
+		<crc>1510352856</crc>
+		<type>RE</type>
+	</exe>
+	<info>
+		<name>[ 2013-07-09 kRO ]</name>
+		<author>DiffTeam</author>
+		<version>1.0</version>
+		<releasedate>now</releasedate>
+	</info>
+	<override>
+		<peheader>64</peheader>
+		<imagesize>10903552</imagesize>
+		<sectioncount>5</sectioncount>
+		<xdiffstart>472</xdiffstart>
+		<vsize>4096</vsize>
+		<voffset>10899456</voffset>
+		<rsize>2048</rsize>
+		<roffset>6555648</roffset>
+	</override>
+	<patches>
+		<patch id="2" name="Allow Chat Flood (? lines)" type="UI">
+			<desc>Disable the clientside repeat limit of 3, and sets it to the specified value.</desc>
+			<input name="$allowChatFlood" type="byte" op="-1" min="1"/>
+			<changes>
+				<byte offset="3ebf78" old="2" new="$allowChatFlood"/>
+			</changes>
+		</patch>
+		<patch id="88" name="Allow space in guild name" type="UI">
+			<desc>Allow player to create a guild with space in the name (/guild &quot;Space Name&quot;).</desc>
+			<changes>
+				<byte offset="3f2954" old="20" new="21"/>
+			</changes>
+		</patch>
+		<patch id="97" name="Cancel to Login Window" type="Fix">
+			<desc>Makes clicking the Cancel button in Character selection window return to login window instead of Quitting</desc>
+			<changes>
+				<byte offset="9bc92" old="6a" new="e8"/>
+				<byte offset="9bc93" old="78" new="b9"/>
+				<byte offset="9bc94" old="68" new="b1"/>
+				<byte offset="9bc95" old="18" new="2c"/>
+				<byte offset="9bc96" old="1" new="0"/>
+				<byte offset="9bc97" old="0" new="8b"/>
+				<byte offset="9bc98" old="0" new="c8"/>
+				<byte offset="9bc99" old="68" new="e8"/>
+				<byte offset="9bc9a" old="c0" new="72"/>
+				<byte offset="9bc9b" old="28" new="a6"/>
+				<byte offset="9bc9c" old="96" new="2c"/>
+				<byte offset="9bc9e" old="53" new="8b"/>
+				<byte offset="9bc9f" old="53" new="d"/>
+				<byte offset="9bca0" old="6a" new="fc"/>
+				<byte offset="9bca1" old="1" new="39"/>
+				<byte offset="9bca2" old="6a" new="a2"/>
+				<byte offset="9bca3" old="2" new="0"/>
+				<byte offset="9bca4" old="6a" new="8b"/>
+				<byte offset="9bca6" old="e8" new="8b"/>
+				<byte offset="9bca7" old="65" new="42"/>
+				<byte offset="9bca8" old="db" new="18"/>
+				<byte offset="9bca9" old="18" new="53"/>
+				<byte offset="9bcaa" old="0" new="53"/>
+				<byte offset="9bcab" old="83" new="53"/>
+				<byte offset="9bcac" old="c4" new="53"/>
+				<byte offset="9bcad" old="4" new="68"/>
+				<byte offset="9bcae" old="50" new="23"/>
+				<byte offset="9bcaf" old="b9" new="27"/>
+				<byte offset="9bcb0" old="78" new="0"/>
+				<byte offset="9bcb1" old="4" new="0"/>
+				<byte offset="9bcb2" old="b0" new="ff"/>
+				<byte offset="9bcb3" old="0" new="d0"/>
+				<byte offset="9bcb4" old="e8" new="eb"/>
+				<byte offset="9bcb5" old="57" new="21"/>
+			</changes>
+		</patch>
+		<patch id="7" name="Change Gravity Error Handler" type="Fix">
+			<desc>It changes the Gravity Error Handler Mesage for a Custom One Pre-Defined by Diff Team.</desc>
+			<changes>
+				<byte offset="63b212" old="47" new="20"/>
+				<byte offset="63b214" old="72" new="20"/>
+				<byte offset="63b216" old="61" new="20"/>
+				<byte offset="63b218" old="76" new="20"/>
+				<byte offset="63b21a" old="69" new="20"/>
+				<byte offset="63b21c" old="74" new="20"/>
+				<byte offset="63b21e" old="79" new="20"/>
+				<byte offset="63b220" old="28" new="20"/>
+				<byte offset="63b222" old="74" new="20"/>
+				<byte offset="63b224" old="6d" new="20"/>
+				<byte offset="63b226" old="29" new="20"/>
+				<byte offset="63b22a" old="45" new="20"/>
+				<byte offset="63b22c" old="72" new="20"/>
+				<byte offset="63b22e" old="72" new="20"/>
+				<byte offset="63b230" old="6f" new="20"/>
+				<byte offset="63b232" old="72" new="20"/>
+				<byte offset="63b236" old="48" new="20"/>
+				<byte offset="63b238" old="61" new="20"/>
+				<byte offset="63b23a" old="6e" new="20"/>
+				<byte offset="63b23c" old="64" new="20"/>
+				<byte offset="63b23e" old="6c" new="20"/>
+				<byte offset="63b240" old="65" new="20"/>
+				<byte offset="63b242" old="72" new="20"/>
+				<byte offset="63b1c8" old="47" new="44"/>
+				<byte offset="63b1ca" old="72" new="69"/>
+				<byte offset="63b1cc" old="61" new="66"/>
+				<byte offset="63b1ce" old="76" new="66"/>
+				<byte offset="63b1d0" old="69" new="20"/>
+				<byte offset="63b1d2" old="74" new="54"/>
+				<byte offset="63b1d4" old="79" new="65"/>
+				<byte offset="63b1d6" old="20" new="61"/>
+				<byte offset="63b1d8" old="6f" new="6d"/>
+				<byte offset="63b1da" old="72" new="20"/>
+				<byte offset="63b1dc" old="20" new="6f"/>
+				<byte offset="63b1de" old="47" new="6e"/>
+				<byte offset="63b1e0" old="61" new="20"/>
+				<byte offset="63b1e2" old="6d" new="65"/>
+				<byte offset="63b1e4" old="65" new="41"/>
+				<byte offset="63b1e8" old="4d" new="46"/>
+				<byte offset="63b1ea" old="61" new="6f"/>
+				<byte offset="63b1ec" old="73" new="72"/>
+				<byte offset="63b1ee" old="74" new="75"/>
+				<byte offset="63b1f0" old="65" new="6d"/>
+				<byte offset="63b1f2" old="72" new="73"/>
+			</changes>
+		</patch>
+		<patch id="52" name="GM Chat Color" type="Color">
+			<desc>Changes the GM Chat color and sets it to the specified value. Default value is ffff00 (a yellow color)</desc>
+			<input name="$gmChatColor" type="color"/>
+			<changes>
+				<dword offset="414475" old="ffff" new="$gmChatColor"/>
+			</changes>
+		</patch>
+		<patch id="57" name="Guild Chat Color" type="Color">
+			<desc>Changes the Guild Chat color and sets it to the specified value. Default Value is b4ffb4 (a light green color)</desc>
+			<input name="$guildChatColor" type="color"/>
+			<changes>
+				<dword offset="4145b0" old="b4ffb4" new="$guildChatColor"/>
+			</changes>
+		</patch>
+		<patch id="56" name="Main Chat Color" type="Color">
+			<desc>Changes the Main Chat color and sets it to the specified value.</desc>
+			<input name="$mainChatColor" type="color"/>
+			<changes>
+				<dword offset="4144b2" old="ffffff" new="$mainChatColor"/>
+			</changes>
+		</patch>
+		<patch id="58" name="Other Party Chat Color" type="Color">
+			<desc>Changes the Other Party members Chat color and sets it to the specified value. Default value is ffc8c8 (a pinkish color)</desc>
+			<input name="$otherpartyChatColor" type="color"/>
+			<changes>
+				<dword offset="4146c8" old="c8c8ff" new="$otherpartyChatColor"/>
+			</changes>
+		</patch>
+		<patch id="59" name="Your Party Chat Color" type="Color">
+			<desc>Changes Your Party Chat color and sets it to the specified value. Default value is ffc800 (An orange color)</desc>
+			<input name="$yourpartyChatColor" type="color"/>
+			<changes>
+				<dword offset="41469d" old="c8ff" new="$yourpartyChatColor"/>
+			</changes>
+		</patch>
+		<patch id="55" name="OtherPlayer Chat Color" type="Color">
+			<desc>Changes other players Chat color and sets it to the specified value. Default value is ffffff (a white color)</desc>
+			<input name="$otherChatColor" type="color"/>
+			<changes>
+				<dword offset="4144b2" old="ffffff" new="$otherChatColor"/>
+			</changes>
+		</patch>
+		<patch id="60" name="Your Player Chat Color" type="Color">
+			<desc>Changes your players Chat color and sets it to the specified value. Default value is 00ff00 (a green color)</desc>
+			<input name="$yourChatColor" type="color"/>
+			<changes>
+				<dword offset="40f822" old="ff00" new="$yourChatColor"/>
+			</changes>
+		</patch>
+		<patch id="8" name="Custom Window Title" type="UI">
+			<desc>Changes window title. Normally, the window title is &quot;Ragnarok&quot;.</desc>
+			<input name="$customWindowTitle" type="string" min="1" max="60"/>
+			<changes>
+				<string offset="563748" old="" new="$customWindowTitle"/>
+				<dword offset="1b89ec" old="972278" new="964548"/>
+			</changes>
+		</patch>
+		<patch id="9" name="Disable 1rag1 type parameters" type="Fix">
+			<desc>Enable this to launch the client directly without patching or any 1rag1, 1sak1 etc parameters.</desc>
+			<changes>
+				<byte offset="4b73ca" old="75" new="eb"/>
+			</changes>
+		</patch>
+		<patch id="10" name="Disable 4 Letter UserCharacter Limit" type="Fix">
+			<desc>Will allow people to use character names shorter than 4 characters.</desc>
+			<changes>
+				<byte offset="8be03" old="4" new="0"/>
+			</changes>
+		</patch>
+		<patch id="11" name="Disable 4 Letter UserID Limit" type="Fix">
+			<desc>Will allow people to use account names shorter than 4 characters.</desc>
+			<changes>
+				<byte offset="90dbe" old="4" new="0"/>
+			</changes>
+		</patch>
+		<patch id="12" name="Disable 4 Letter UserPassword Limit" type="Fix">
+			<desc>Will allow people to use passwords shorter than 4 characters.</desc>
+			<changes>
+				<byte offset="90cd6" old="4" new="0"/>
+			</changes>
+		</patch>
+		<patch id="99" name="Disable ba_frostjoke.txt" type="UI">
+			<desc>Disable chat on file ba_frostjoke</desc>
+			<changes>
+				<byte offset="599dc0" old="65" new="0"/>
+				<byte offset="599df4" old="42" new="0"/>
+			</changes>
+		</patch>
+		<patch id="98" name="Disable dc_scream.txt" type="UI">
+			<desc>Disable chat on file dc_scream</desc>
+			<changes>
+				<byte offset="599ddc" old="65" new="0"/>
+				<byte offset="599e08" old="44" new="0"/>
+			</changes>
+		</patch>
+		<patch id="13" name="Disable Ragexe Filename Check" type="Fix">
+			<desc>Disables the check that forces the rakexe to quit if not called &quot;sakexe.exe&quot; in langtype 0</desc>
+			<changes>
+				<byte offset="4b762a" old="75" new="eb"/>
+			</changes>
+		</patch>
+		<patch id="14" name="Disable Hallucination Wavy Screen" type="Fix">
+			<desc>Disables the Hallucination effect (screen becomes wavy and lags the client), used by baphomet, horongs, and such.</desc>
+			<changes>
+				<byte offset="22bcb" old="f" new="90"/>
+				<byte offset="22bcc" old="84" new="e9"/>
+			</changes>
+		</patch>
+		<patch id="15" name="Disable HShield" type="Fix">
+			<desc>Disables HackShield</desc>
+			<changes>
+				<byte offset="229024" old="83" new="31"/>
+				<byte offset="229025" old="3d" new="c0"/>
+				<byte offset="229026" old="84" new="40"/>
+				<byte offset="229027" old="6f" new="90"/>
+				<byte offset="229028" old="c4" new="90"/>
+				<byte offset="229029" old="0" new="90"/>
+				<byte offset="22902a" old="0" new="90"/>
+				<byte offset="22902b" old="74" new="90"/>
+				<byte offset="22902c" old="6" new="90"/>
+				<byte offset="22902d" old="33" new="90"/>
+				<byte offset="22902e" old="c0" new="90"/>
+				<byte offset="3a7363" old="e8" new="b0"/>
+				<byte offset="3a7364" old="b8" new="1"/>
+				<byte offset="3a7365" old="fe" new="5e"/>
+				<byte offset="3a7366" old="ff" new="c3"/>
+				<byte offset="3a7367" old="ff" new="90"/>
+				<byte offset="63d1ec" old="38" new="0"/>
+				<byte offset="63d1ed" old="47" new="0"/>
+				<byte offset="63d1ee" old="a6" new="0"/>
+				<byte offset="63d1f0" old="14" new="0"/>
+				<byte offset="63d1f1" old="ca" new="0"/>
+				<byte offset="63d1f2" old="55" new="0"/>
+				<byte offset="63d174" old="b8" new="38"/>
+				<byte offset="63d175" old="3b" new="47"/>
+				<byte offset="63d178" old="44" new="14"/>
+				<byte offset="63d179" old="c8" new="ca"/>
+			</changes>
+		</patch>
+		<patch id="61" name="Disable Packet Encryption" type="UI">
+			<desc>Disable kRO Packet_ID Encryption.</desc>
+			<changes>
+				<byte offset="a91f0" old="8b" new="b8"/>
+				<byte offset="a91f1" old="41" new="0"/>
+				<byte offset="a91f2" old="8" new="0"/>
+				<byte offset="a91f3" old="f" new="0"/>
+				<byte offset="a91f4" old="af" new="0"/>
+				<byte offset="a91f5" old="41" new="ba"/>
+				<byte offset="a91f6" old="4" new="0"/>
+				<byte offset="a91f7" old="3" new="0"/>
+				<byte offset="a91f8" old="41" new="0"/>
+				<byte offset="a91f9" old="c" new="0"/>
+				<byte offset="23de00" old="8b" new="b8"/>
+				<byte offset="23de01" old="41" new="0"/>
+				<byte offset="23de02" old="8" new="0"/>
+				<byte offset="23de03" old="f" new="0"/>
+				<byte offset="23de04" old="af" new="0"/>
+				<byte offset="23de05" old="41" new="ba"/>
+				<byte offset="23de06" old="4" new="0"/>
+				<byte offset="23de07" old="3" new="0"/>
+				<byte offset="23de08" old="41" new="0"/>
+				<byte offset="23de09" old="c" new="0"/>
+			</changes>
+		</patch>
+		<patch id="16" name="Disable Swear Filter" type="UI">
+			<desc>The content of manner.txt has no impact on ability to send text.</desc>
+			<changes>
+				<byte offset="20ac64" old="c2" new="30"/>
+				<byte offset="20ac65" old="4" new="c0"/>
+				<byte offset="20ac66" old="0" new="c2"/>
+				<byte offset="20ac67" old="cc" new="4"/>
+				<byte offset="20ac68" old="cc" new="0"/>
+			</changes>
+		</patch>
+		<patch id="68" name="Enable 64k Hairstyle" type="UI">
+			<desc>Enable 64k hairstyle instead 27 by default</desc>
+			<changes>
+				<byte offset="58f2f2" old="73" new="75"/>
+				<byte offset="2a1847" old="83" new="8b"/>
+				<byte offset="2a1848" old="7d" new="4d"/>
+				<byte offset="2a1849" old="e8" new="18"/>
+				<byte offset="2a184a" old="10" new="8b"/>
+				<byte offset="2a184b" old="8b" new="9"/>
+				<byte offset="2a184c" old="4d" new="85"/>
+				<byte offset="2a184d" old="d4" new="c9"/>
+				<byte offset="2a184e" old="73" new="75"/>
+				<byte offset="2a184f" old="3" new="2"/>
+				<byte offset="2a1850" old="8d" new="41"/>
+				<byte offset="2a1851" old="4d" new="41"/>
+				<byte offset="2a1852" old="d4" new="90"/>
+				<byte offset="2a17bc" old="14" new="12"/>
+				<byte offset="2a17bd" old="8a" new="90"/>
+				<byte offset="2a17d9" old="14" new="11"/>
+				<byte offset="2a17da" old="81" new="90"/>
+				<byte offset="2a1734" old="7e" new="eb"/>
+			</changes>
+		</patch>
+		<patch id="77" name="Enable Custom 3D Bones" type="Data">
+			<desc>Enables the use of custom 3D monsters (Granny) by lifting hardcoded ID limit.</desc>
+			<changes>
+				<byte offset="45711" old="8c" new="35"/>
+			</changes>
+		</patch>
+		<patch id="90" name="EnableDNSSupport" type="UI">
+			<desc>Enable DNS support for clientinfo.xml</desc>
+			<changes>
+				<byte offset="446f11" old="b" new="ec"/>
+				<byte offset="446f12" old="be" new="3e"/>
+				<byte offset="446f13" old="dd" new="11"/>
+				<byte offset="446f14" old="ff" new="0"/>
+				<byte offset="55ae01" old="0" new="e8"/>
+				<byte offset="55ae02" old="0" new="1a"/>
+				<byte offset="55ae03" old="0" new="7f"/>
+				<byte offset="55ae04" old="0" new="cc"/>
+				<byte offset="55ae05" old="0" new="ff"/>
+				<byte offset="55ae06" old="0" new="60"/>
+				<byte offset="55ae07" old="0" new="8b"/>
+				<byte offset="55ae08" old="0" new="35"/>
+				<byte offset="55ae09" old="0" new="7c"/>
+				<byte offset="55ae0a" old="0" new="36"/>
+				<byte offset="55ae0b" old="0" new="a2"/>
+				<byte offset="55ae0d" old="0" new="56"/>
+				<byte offset="55ae0e" old="0" new="ff"/>
+				<byte offset="55ae0f" old="0" new="15"/>
+				<byte offset="55ae10" old="0" new="fc"/>
+				<byte offset="55ae11" old="0" new="c7"/>
+				<byte offset="55ae12" old="0" new="95"/>
+				<byte offset="55ae14" old="0" new="8b"/>
+				<byte offset="55ae15" old="0" new="48"/>
+				<byte offset="55ae16" old="0" new="c"/>
+				<byte offset="55ae17" old="0" new="8b"/>
+				<byte offset="55ae18" old="0" new="11"/>
+				<byte offset="55ae19" old="0" new="89"/>
+				<byte offset="55ae1a" old="0" new="d0"/>
+				<byte offset="55ae1b" old="0" new="f"/>
+				<byte offset="55ae1c" old="0" new="b6"/>
+				<byte offset="55ae1d" old="0" new="48"/>
+				<byte offset="55ae1e" old="0" new="3"/>
+				<byte offset="55ae1f" old="0" new="51"/>
+				<byte offset="55ae20" old="0" new="f"/>
+				<byte offset="55ae21" old="0" new="b6"/>
+				<byte offset="55ae22" old="0" new="48"/>
+				<byte offset="55ae23" old="0" new="2"/>
+				<byte offset="55ae24" old="0" new="51"/>
+				<byte offset="55ae25" old="0" new="f"/>
+				<byte offset="55ae26" old="0" new="b6"/>
+				<byte offset="55ae27" old="0" new="48"/>
+				<byte offset="55ae28" old="0" new="1"/>
+				<byte offset="55ae29" old="0" new="51"/>
+				<byte offset="55ae2a" old="0" new="f"/>
+				<byte offset="55ae2b" old="0" new="b6"/>
+				<byte offset="55ae2c" old="0" new="8"/>
+				<byte offset="55ae2d" old="0" new="51"/>
+				<byte offset="55ae2e" old="0" new="68"/>
+				<byte offset="55ae2f" old="0" new="50"/>
+				<byte offset="55ae30" old="0" new="c8"/>
+				<byte offset="55ae31" old="0" new="99"/>
+				<byte offset="55ae33" old="0" new="68"/>
+				<byte offset="55ae34" old="0" new="4e"/>
+				<byte offset="55ae35" old="0" new="bc"/>
+				<byte offset="55ae36" old="0" new="95"/>
+				<byte offset="55ae38" old="0" new="ff"/>
+				<byte offset="55ae39" old="0" new="15"/>
+				<byte offset="55ae3a" old="0" new="9c"/>
+				<byte offset="55ae3b" old="0" new="c3"/>
+				<byte offset="55ae3c" old="0" new="95"/>
+				<byte offset="55ae3e" old="0" new="83"/>
+				<byte offset="55ae3f" old="0" new="c4"/>
+				<byte offset="55ae40" old="0" new="18"/>
+				<byte offset="55ae41" old="0" new="c7"/>
+				<byte offset="55ae42" old="0" new="5"/>
+				<byte offset="55ae43" old="0" new="7c"/>
+				<byte offset="55ae44" old="0" new="36"/>
+				<byte offset="55ae45" old="0" new="a2"/>
+				<byte offset="55ae47" old="0" new="4e"/>
+				<byte offset="55ae48" old="0" new="bc"/>
+				<byte offset="55ae49" old="0" new="95"/>
+				<byte offset="55ae4b" old="0" new="61"/>
+				<byte offset="55ae4c" old="0" new="c3"/>
+				<byte offset="55ae4e" old="0" new="31"/>
+				<byte offset="55ae4f" old="0" new="32"/>
+				<byte offset="55ae50" old="0" new="37"/>
+				<byte offset="55ae51" old="0" new="2e"/>
+				<byte offset="55ae52" old="0" new="30"/>
+				<byte offset="55ae53" old="0" new="2e"/>
+				<byte offset="55ae54" old="0" new="30"/>
+				<byte offset="55ae55" old="0" new="2e"/>
+				<byte offset="55ae56" old="0" new="31"/>
+			</changes>
+		</patch>
+		<patch id="49" name="Enable Multiple GRFs" type="UI">
+			<desc>If you enable this feature, you will have to put a data.ini in your client folder.&#13;
+You can only load up to 10 total grf files with this option (0-9).&#13;
+The read priority is 0 first to 9 last.&#13;
+&#13;
+--------[ Example of data.ini ]---------&#13;
+[data]&#13;
+0=bdata.grf&#13;
+1=adata.grf&#13;
+2=sdata.grf&#13;
+3=data.grf&#13;
+----------------------------------------&#13;
+&#13;
+If you only have 3 GRF files, you would only need to use: 0=first.grf, 1=second.grf, 2=last.grf</desc>
+			<changes>
+				<byte offset="4b7440" old="68" new="90"/>
+				<byte offset="4b7441" old="98" new="90"/>
+				<byte offset="4b7442" old="36" new="90"/>
+				<byte offset="4b7443" old="9a" new="90"/>
+				<byte offset="4b7444" old="0" new="90"/>
+				<byte offset="4b7445" old="b9" new="90"/>
+				<byte offset="4b7446" old="24" new="90"/>
+				<byte offset="4b7447" old="6c" new="90"/>
+				<byte offset="4b7448" old="c4" new="90"/>
+				<byte offset="4b7449" old="0" new="90"/>
+				<byte offset="4b744b" old="91" new="9"/>
+				<byte offset="4b744c" old="a" new="3a"/>
+				<byte offset="4b744d" old="d6" new="a"/>
+				<byte offset="4b744e" old="ff" new="0"/>
+				<byte offset="55ae58" old="0" new="c8"/>
+				<byte offset="55ae59" old="0" new="80"/>
+				<byte offset="55ae5c" old="0" new="60"/>
+				<byte offset="55ae5d" old="0" new="68"/>
+				<byte offset="55ae5e" old="0" new="46"/>
+				<byte offset="55ae5f" old="0" new="bd"/>
+				<byte offset="55ae60" old="0" new="95"/>
+				<byte offset="55ae62" old="0" new="ff"/>
+				<byte offset="55ae63" old="0" new="15"/>
+				<byte offset="55ae64" old="0" new="8"/>
+				<byte offset="55ae65" old="0" new="c2"/>
+				<byte offset="55ae66" old="0" new="95"/>
+				<byte offset="55ae68" old="0" new="85"/>
+				<byte offset="55ae69" old="0" new="c0"/>
+				<byte offset="55ae6a" old="0" new="74"/>
+				<byte offset="55ae6b" old="0" new="23"/>
+				<byte offset="55ae6c" old="0" new="8b"/>
+				<byte offset="55ae6d" old="0" new="3d"/>
+				<byte offset="55ae6e" old="0" new="d4"/>
+				<byte offset="55ae6f" old="0" new="c1"/>
+				<byte offset="55ae70" old="0" new="95"/>
+				<byte offset="55ae72" old="0" new="68"/>
+				<byte offset="55ae73" old="0" new="d"/>
+				<byte offset="55ae74" old="0" new="bd"/>
+				<byte offset="55ae75" old="0" new="95"/>
+				<byte offset="55ae77" old="0" new="89"/>
+				<byte offset="55ae78" old="0" new="c3"/>
+				<byte offset="55ae79" old="0" new="50"/>
+				<byte offset="55ae7a" old="0" new="ff"/>
+				<byte offset="55ae7b" old="0" new="d7"/>
+				<byte offset="55ae7c" old="0" new="85"/>
+				<byte offset="55ae7d" old="0" new="c0"/>
+				<byte offset="55ae7e" old="0" new="74"/>
+				<byte offset="55ae7f" old="0" new="f"/>
+				<byte offset="55ae80" old="0" new="89"/>
+				<byte offset="55ae81" old="0" new="45"/>
+				<byte offset="55ae82" old="0" new="f6"/>
+				<byte offset="55ae83" old="0" new="68"/>
+				<byte offset="55ae84" old="0" new="26"/>
+				<byte offset="55ae85" old="0" new="bd"/>
+				<byte offset="55ae86" old="0" new="95"/>
+				<byte offset="55ae88" old="0" new="89"/>
+				<byte offset="55ae89" old="0" new="d8"/>
+				<byte offset="55ae8a" old="0" new="50"/>
+				<byte offset="55ae8b" old="0" new="ff"/>
+				<byte offset="55ae8c" old="0" new="d7"/>
+				<byte offset="55ae8d" old="0" new="85"/>
+				<byte offset="55ae8e" old="0" new="c0"/>
+				<byte offset="55ae8f" old="0" new="74"/>
+				<byte offset="55ae90" old="0" new="6e"/>
+				<byte offset="55ae91" old="0" new="89"/>
+				<byte offset="55ae92" old="0" new="45"/>
+				<byte offset="55ae93" old="0" new="fa"/>
+				<byte offset="55ae94" old="0" new="31"/>
+				<byte offset="55ae95" old="0" new="d2"/>
+				<byte offset="55ae96" old="0" new="66"/>
+				<byte offset="55ae97" old="0" new="c7"/>
+				<byte offset="55ae98" old="0" new="45"/>
+				<byte offset="55ae99" old="0" new="fe"/>
+				<byte offset="55ae9a" old="0" new="39"/>
+				<byte offset="55ae9c" old="0" new="52"/>
+				<byte offset="55ae9d" old="0" new="68"/>
+				<byte offset="55ae9e" old="0" new="2"/>
+				<byte offset="55ae9f" old="0" new="bd"/>
+				<byte offset="55aea0" old="0" new="95"/>
+				<byte offset="55aea2" old="0" new="6a"/>
+				<byte offset="55aea3" old="0" new="74"/>
+				<byte offset="55aea4" old="0" new="8d"/>
+				<byte offset="55aea5" old="0" new="5d"/>
+				<byte offset="55aea6" old="0" new="81"/>
+				<byte offset="55aea7" old="0" new="53"/>
+				<byte offset="55aea8" old="0" new="8d"/>
+				<byte offset="55aea9" old="0" new="45"/>
+				<byte offset="55aeaa" old="0" new="fe"/>
+				<byte offset="55aeab" old="0" new="50"/>
+				<byte offset="55aeac" old="0" new="50"/>
+				<byte offset="55aead" old="0" new="68"/>
+				<byte offset="55aeae" old="0" new="41"/>
+				<byte offset="55aeaf" old="0" new="bd"/>
+				<byte offset="55aeb0" old="0" new="95"/>
+				<byte offset="55aeb2" old="0" new="ff"/>
+				<byte offset="55aeb3" old="0" new="55"/>
+				<byte offset="55aeb4" old="0" new="f6"/>
+				<byte offset="55aeb5" old="0" new="8d"/>
+				<byte offset="55aeb6" old="0" new="4d"/>
+				<byte offset="55aeb7" old="0" new="fe"/>
+				<byte offset="55aeb8" old="0" new="66"/>
+				<byte offset="55aeb9" old="0" new="8b"/>
+				<byte offset="55aeba" old="0" new="9"/>
+				<byte offset="55aebb" old="0" new="8d"/>
+				<byte offset="55aebc" old="0" new="5d"/>
+				<byte offset="55aebd" old="0" new="81"/>
+				<byte offset="55aebe" old="0" new="66"/>
+				<byte offset="55aebf" old="0" new="3b"/>
+				<byte offset="55aec0" old="0" new="b"/>
+				<byte offset="55aec1" old="0" new="5a"/>
+				<byte offset="55aec2" old="0" new="74"/>
+				<byte offset="55aec3" old="0" new="e"/>
+				<byte offset="55aec4" old="0" new="52"/>
+				<byte offset="55aec5" old="0" new="53"/>
+				<byte offset="55aec6" old="0" new="b9"/>
+				<byte offset="55aec7" old="0" new="24"/>
+				<byte offset="55aec8" old="0" new="6c"/>
+				<byte offset="55aec9" old="0" new="c4"/>
+				<byte offset="55aecb" old="0" new="e8"/>
+				<byte offset="55aecc" old="0" new="10"/>
+				<byte offset="55aecd" old="0" new="d0"/>
+				<byte offset="55aece" old="0" new="cb"/>
+				<byte offset="55aecf" old="0" new="ff"/>
+				<byte offset="55aed0" old="0" new="5a"/>
+				<byte offset="55aed1" old="0" new="42"/>
+				<byte offset="55aed2" old="0" new="fe"/>
+				<byte offset="55aed3" old="0" new="4d"/>
+				<byte offset="55aed4" old="0" new="fe"/>
+				<byte offset="55aed5" old="0" new="80"/>
+				<byte offset="55aed6" old="0" new="7d"/>
+				<byte offset="55aed7" old="0" new="fe"/>
+				<byte offset="55aed8" old="0" new="30"/>
+				<byte offset="55aed9" old="0" new="73"/>
+				<byte offset="55aeda" old="0" new="c1"/>
+				<byte offset="55aedb" old="0" new="85"/>
+				<byte offset="55aedc" old="0" new="d2"/>
+				<byte offset="55aedd" old="0" new="75"/>
+				<byte offset="55aede" old="0" new="20"/>
+				<byte offset="55aedf" old="0" new="68"/>
+				<byte offset="55aee0" old="0" new="2"/>
+				<byte offset="55aee1" old="0" new="bd"/>
+				<byte offset="55aee2" old="0" new="95"/>
+				<byte offset="55aee4" old="0" new="68"/>
+				<byte offset="55aee5" old="0" new="98"/>
+				<byte offset="55aee6" old="0" new="36"/>
+				<byte offset="55aee7" old="0" new="9a"/>
+				<byte offset="55aee9" old="0" new="66"/>
+				<byte offset="55aeea" old="0" new="c7"/>
+				<byte offset="55aeeb" old="0" new="45"/>
+				<byte offset="55aeec" old="0" new="fe"/>
+				<byte offset="55aeed" old="0" new="32"/>
+				<byte offset="55aeef" old="0" new="8d"/>
+				<byte offset="55aef0" old="0" new="45"/>
+				<byte offset="55aef1" old="0" new="fe"/>
+				<byte offset="55aef2" old="0" new="50"/>
+				<byte offset="55aef3" old="0" new="68"/>
+				<byte offset="55aef4" old="0" new="41"/>
+				<byte offset="55aef5" old="0" new="bd"/>
+				<byte offset="55aef6" old="0" new="95"/>
+				<byte offset="55aef8" old="0" new="ff"/>
+				<byte offset="55aef9" old="0" new="55"/>
+				<byte offset="55aefa" old="0" new="fa"/>
+				<byte offset="55aefb" old="0" new="85"/>
+				<byte offset="55aefc" old="0" new="c0"/>
+				<byte offset="55aefd" old="0" new="75"/>
+				<byte offset="55aefe" old="0" new="97"/>
+				<byte offset="55aeff" old="0" new="61"/>
+				<byte offset="55af00" old="0" new="c9"/>
+				<byte offset="55af01" old="0" new="c3"/>
+				<byte offset="55af02" old="0" new="2e"/>
+				<byte offset="55af03" old="0" new="5c"/>
+				<byte offset="55af04" old="0" new="44"/>
+				<byte offset="55af05" old="0" new="41"/>
+				<byte offset="55af06" old="0" new="54"/>
+				<byte offset="55af07" old="0" new="41"/>
+				<byte offset="55af08" old="0" new="2e"/>
+				<byte offset="55af09" old="0" new="49"/>
+				<byte offset="55af0a" old="0" new="4e"/>
+				<byte offset="55af0b" old="0" new="49"/>
+				<byte offset="55af0d" old="0" new="47"/>
+				<byte offset="55af0e" old="0" new="65"/>
+				<byte offset="55af0f" old="0" new="74"/>
+				<byte offset="55af10" old="0" new="50"/>
+				<byte offset="55af11" old="0" new="72"/>
+				<byte offset="55af12" old="0" new="69"/>
+				<byte offset="55af13" old="0" new="76"/>
+				<byte offset="55af14" old="0" new="61"/>
+				<byte offset="55af15" old="0" new="74"/>
+				<byte offset="55af16" old="0" new="65"/>
+				<byte offset="55af17" old="0" new="50"/>
+				<byte offset="55af18" old="0" new="72"/>
+				<byte offset="55af19" old="0" new="6f"/>
+				<byte offset="55af1a" old="0" new="66"/>
+				<byte offset="55af1b" old="0" new="69"/>
+				<byte offset="55af1c" old="0" new="6c"/>
+				<byte offset="55af1d" old="0" new="65"/>
+				<byte offset="55af1e" old="0" new="53"/>
+				<byte offset="55af1f" old="0" new="74"/>
+				<byte offset="55af20" old="0" new="72"/>
+				<byte offset="55af21" old="0" new="69"/>
+				<byte offset="55af22" old="0" new="6e"/>
+				<byte offset="55af23" old="0" new="67"/>
+				<byte offset="55af24" old="0" new="41"/>
+				<byte offset="55af26" old="0" new="57"/>
+				<byte offset="55af27" old="0" new="72"/>
+				<byte offset="55af28" old="0" new="69"/>
+				<byte offset="55af29" old="0" new="74"/>
+				<byte offset="55af2a" old="0" new="65"/>
+				<byte offset="55af2b" old="0" new="50"/>
+				<byte offset="55af2c" old="0" new="72"/>
+				<byte offset="55af2d" old="0" new="69"/>
+				<byte offset="55af2e" old="0" new="76"/>
+				<byte offset="55af2f" old="0" new="61"/>
+				<byte offset="55af30" old="0" new="74"/>
+				<byte offset="55af31" old="0" new="65"/>
+				<byte offset="55af32" old="0" new="50"/>
+				<byte offset="55af33" old="0" new="72"/>
+				<byte offset="55af34" old="0" new="6f"/>
+				<byte offset="55af35" old="0" new="66"/>
+				<byte offset="55af36" old="0" new="69"/>
+				<byte offset="55af37" old="0" new="6c"/>
+				<byte offset="55af38" old="0" new="65"/>
+				<byte offset="55af39" old="0" new="53"/>
+				<byte offset="55af3a" old="0" new="74"/>
+				<byte offset="55af3b" old="0" new="72"/>
+				<byte offset="55af3c" old="0" new="69"/>
+				<byte offset="55af3d" old="0" new="6e"/>
+				<byte offset="55af3e" old="0" new="67"/>
+				<byte offset="55af3f" old="0" new="41"/>
+				<byte offset="55af41" old="0" new="44"/>
+				<byte offset="55af42" old="0" new="61"/>
+				<byte offset="55af43" old="0" new="74"/>
+				<byte offset="55af44" old="0" new="61"/>
+				<byte offset="55af46" old="0" new="4b"/>
+				<byte offset="55af47" old="0" new="45"/>
+				<byte offset="55af48" old="0" new="52"/>
+				<byte offset="55af49" old="0" new="4e"/>
+				<byte offset="55af4a" old="0" new="45"/>
+				<byte offset="55af4b" old="0" new="4c"/>
+				<byte offset="55af4c" old="0" new="33"/>
+				<byte offset="55af4d" old="0" new="32"/>
+			</changes>
+		</patch>
+		<patch id="17" name="Enable Official Custom Fonts" type="UI">
+			<desc>This option forces Official Custom Fonts (eot files int data folder) on all langtype.</desc>
+			<changes>
+				<byte offset="48f0d0" old="f" new="90"/>
+				<byte offset="48f0d1" old="85" new="90"/>
+				<byte offset="48f0d2" old="ae" new="90"/>
+				<byte offset="48f0d3" old="0" new="90"/>
+				<byte offset="48f0d4" old="0" new="90"/>
+				<byte offset="48f0d5" old="0" new="90"/>
+			</changes>
+		</patch>
+		<patch id="19" name="Enable Title Bar Menu" type="UI">
+			<desc>Enable Title Bar Menu (Reduce, Maximize, Close button) and the window icon.</desc>
+			<changes>
+				<byte offset="4b6a07" old="c2" new="ca"/>
+			</changes>
+		</patch>
+		<patch id="76" name="Enforce Official Login Background" type="UI">
+			<desc>Enforce Official Login Background for all langtype</desc>
+			<changes>
+				<byte offset="444923" old="74" new="eb"/>
+			</changes>
+		</patch>
+		<patch id="20" name="Extended Chat Box" type="UI">
+			<desc>Extend the Main/Battle chat box max input chars from 70 to 234.</desc>
+			<changes>
+				<byte offset="ffc4c" old="46" new="ea"/>
+			</changes>
+		</patch>
+		<patch id="21" name="Extended Chat Room Box" type="UI">
+			<desc>Extend the chat room box max input chars from 70 to 234.</desc>
+			<changes>
+				<byte offset="86ec1" old="46" new="ea"/>
+			</changes>
+		</patch>
+		<patch id="69" name="ExtendNpcBox" type="UI">
+			<desc></desc>
+			<changes>
+				<byte offset="3f6be5" old="8" new="4"/>
+				<byte offset="3f6be6" old="8" new="10"/>
+			</changes>
+		</patch>
+		<patch id="22" name="Extended PM Box" type="UI">
+			<desc>Extend the PM chat box max input chars from 70 to 221.</desc>
+			<changes>
+				<byte offset="c6649" old="46" new="ea"/>
+			</changes>
+		</patch>
+		<patchgroup id="23" name="Fix Camera Angles">
+			<patch id="24" name="Fix Camera Angles" type="UI">
+				<desc>Unlocks the possible camera angles to give more freedom of placement. Gives a medium range of around 60 degress</desc>
+				<changes>
+					<byte offset="55af56" old="0" new="28"/>
+					<byte offset="55af57" old="0" new="42"/>
+					<byte offset="3c6907" old="98" new="54"/>
+					<byte offset="3c6908" old="ea" new="bd"/>
+				</changes>
+			</patch>
+			<patch id="25" name="Fix Camera Angles (LESS)" type="UI">
+				<desc>Unlocks the possible camera angles to give more freedom of placement. This enables an 30deg angle </desc>
+				<changes>
+					<byte offset="55af5b" old="0" new="ec"/>
+					<byte offset="55af5c" old="0" new="41"/>
+					<byte offset="3c6907" old="98" new="59"/>
+					<byte offset="3c6908" old="ea" new="bd"/>
+				</changes>
+			</patch>
+			<patch id="26" name="Fix Camera Angles (FULL)" type="UI">
+				<desc>Unlocks the possible camera angles to give more freedom of placement. This enables an almost ground-level camera.</desc>
+				<changes>
+					<byte offset="55af60" old="0" new="82"/>
+					<byte offset="55af61" old="0" new="42"/>
+					<byte offset="3c6907" old="98" new="5e"/>
+					<byte offset="3c6908" old="ea" new="bd"/>
+				</changes>
+			</patch>
+		</patchgroup>
+		<patch id="64" name="@ Bug Fix (Recommended)" type="UI">
+			<desc>Correct the bug to write @ in chat</desc>
+			<changes>
+				<byte offset="190241" old="0" new="1"/>
+			</changes>
+		</patch>
+		<patch id="27" name="HKLM To HKCU" type="Fix">
+			<desc>This makes the client use HK_CURRENT_USER registry entries instead of HK_LOCAL_MACHINE. Neccessary for users who have no admin privileges on their computer.</desc>
+			<changes>
+				<byte offset="8420c" old="2" new="1"/>
+				<byte offset="8424a" old="2" new="1"/>
+				<byte offset="84582" old="2" new="1"/>
+				<byte offset="859a2" old="2" new="1"/>
+				<byte offset="85a0b" old="2" new="1"/>
+				<byte offset="85a32" old="2" new="1"/>
+				<byte offset="85b10" old="2" new="1"/>
+				<byte offset="85c1c" old="2" new="1"/>
+				<byte offset="85c43" old="2" new="1"/>
+				<byte offset="868d6" old="2" new="1"/>
+				<byte offset="86952" old="2" new="1"/>
+				<byte offset="86988" old="2" new="1"/>
+				<byte offset="a5ca6" old="2" new="1"/>
+				<byte offset="b0c59" old="2" new="1"/>
+				<byte offset="b0dd7" old="2" new="1"/>
+				<byte offset="b0e12" old="2" new="1"/>
+				<byte offset="daad8" old="2" new="1"/>
+				<byte offset="db35a" old="2" new="1"/>
+				<byte offset="16eb97" old="2" new="1"/>
+				<byte offset="16ebc5" old="2" new="1"/>
+				<byte offset="1710df" old="2" new="1"/>
+				<byte offset="172b72" old="2" new="1"/>
+				<byte offset="172ba0" old="2" new="1"/>
+				<byte offset="172e48" old="2" new="1"/>
+				<byte offset="178241" old="2" new="1"/>
+				<byte offset="17826f" old="2" new="1"/>
+				<byte offset="178549" old="2" new="1"/>
+				<byte offset="2153d9" old="2" new="1"/>
+				<byte offset="215456" old="2" new="1"/>
+				<byte offset="2154be" old="2" new="1"/>
+				<byte offset="2b9271" old="2" new="1"/>
+				<byte offset="3c53b6" old="2" new="1"/>
+				<byte offset="3cce28" old="2" new="1"/>
+				<byte offset="3cce57" old="2" new="1"/>
+				<byte offset="3cd222" old="2" new="1"/>
+				<byte offset="447814" old="2" new="1"/>
+				<byte offset="46bd9b" old="2" new="1"/>
+				<byte offset="46be9a" old="2" new="1"/>
+				<byte offset="471ec9" old="2" new="1"/>
+				<byte offset="471efc" old="2" new="1"/>
+				<byte offset="471f7b" old="2" new="1"/>
+				<byte offset="471fa9" old="2" new="1"/>
+				<byte offset="4a163a" old="2" new="1"/>
+				<byte offset="4a166e" old="2" new="1"/>
+				<byte offset="4b53ef" old="2" new="1"/>
+				<byte offset="4b5420" old="2" new="1"/>
+				<byte offset="4b5441" old="2" new="1"/>
+				<byte offset="4b5563" old="2" new="1"/>
+			</changes>
+		</patch>
+		<patch id="71" name="Ignore Missing File Error" type="Fix">
+			<desc></desc>
+			<changes>
+				<byte offset="1b8b18" old="8b" new="31"/>
+				<byte offset="1b8b19" old="45" new="c0"/>
+				<byte offset="1b8b1a" old="8" new="5d"/>
+				<byte offset="1b8b1b" old="8b" new="c3"/>
+			</changes>
+		</patch>
+		<patch id="72" name="Ignore Missing Palette Error" type="Fix">
+			<desc></desc>
+			<changes>
+				<byte offset="47ed5" old="f" new="90"/>
+				<byte offset="47ed6" old="85" new="e9"/>
+			</changes>
+		</patch>
+		<patch id="74" name="Increase Screenshot Quality" type="UI">
+			<desc></desc>
+			<input name="$uQuality" type="string" min="2" max="2"/>
+			<changes>
+				<byte offset="155c0" old="a8" new="28"/>
+				<byte offset="155c4" old="3" new="$uQuality"/>
+			</changes>
+		</patch>
+		<patch id="28" name="Increase Headgear ViewID to 5000" type="Add">
+			<desc>Increases the limit for the headgear ViewIDs from 2000 to 5000</desc>
+			<changes>
+				<byte offset="4749c6" old="d0" new="88"/>
+				<byte offset="4749c7" old="7" new="13"/>
+				<byte offset="4749d1" old="d0" new="88"/>
+				<byte offset="4749d2" old="7" new="13"/>
+				<byte offset="474a7f" old="d0" new="88"/>
+				<byte offset="474a80" old="7" new="13"/>
+			</changes>
+		</patch>
+		<patchgroup id="29" name="Increase Zoom">
+			<patch id="30" name="Increase Zoom Out 50%" type="UI">
+				<desc>Increases the zoom-out range by 50 percent</desc>
+				<changes>
+					<byte offset="637bce" old="c8" new="ff"/>
+				</changes>
+			</patch>
+			<patch id="31" name="Increase Zoom Out 75%" type="UI">
+				<desc>Increases the zoom-out range by 75 percent</desc>
+				<changes>
+					<byte offset="637bce" old="c8" new="4c"/>
+					<byte offset="637bcf" old="43" new="44"/>
+				</changes>
+			</patch>
+			<patch id="32" name="Increase Zoom Out Max" type="UI">
+				<desc>Maximizes the zoom-out range</desc>
+				<changes>
+					<byte offset="637bce" old="c8" new="99"/>
+					<byte offset="637bcf" old="43" new="44"/>
+				</changes>
+			</patch>
+		</patchgroup>
+		<patch id="65" name="Load ItemInfo.lua before lub" type="UI">
+			<desc>If the client has been update, your ItemInfo.lub with your translated items will be lost, check the option to keep your items into the lua file</desc>
+			<changes>
+				<byte offset="5719ce" old="62" new="61"/>
+			</changes>
+		</patch>
+		<patch id="33" name="KOREA ServiceType XML Fix" type="Fix">
+			<desc>Applies ServiceType &quot;America&quot; properties when your sclientinfo says &quot;Korea&quot;.</desc>
+			<changes>
+				<byte offset="1b84fd" old="e9" new="90"/>
+				<byte offset="1b84fe" old="6e" new="90"/>
+				<byte offset="1b84ff" old="ea" new="90"/>
+				<byte offset="1b8500" old="ff" new="90"/>
+				<byte offset="1b8501" old="ff" new="90"/>
+			</changes>
+		</patch>
+		<patchgroup id="85" name="Only Selected Login Background">
+			<patch id="86" name="Only First Login Background" type="UI">
+				<desc>Displays always the first login background.</desc>
+				<changes>
+					<byte offset="56f8a4" old="32" new="5f"/>
+					<byte offset="56f8a5" old="5f" new="b9"/>
+					<byte offset="56f8a6" old="b9" new="e8"/>
+					<byte offset="56f8a7" old="e8" new="b0"/>
+					<byte offset="56f8a8" old="b0" new="e6"/>
+					<byte offset="56f8a9" old="e6" new="25"/>
+					<byte offset="56f8aa" old="25" new="64"/>
+					<byte offset="56f8ab" old="64" new="2d"/>
+					<byte offset="56f8ac" old="2d" new="25"/>
+					<byte offset="56f8ad" old="25" new="64"/>
+					<byte offset="56f8ae" old="64" new="2e"/>
+					<byte offset="56f8af" old="2e" new="62"/>
+					<byte offset="56f8b0" old="62" new="6d"/>
+					<byte offset="56f8b1" old="6d" new="70"/>
+					<byte offset="56f8b2" old="70" new="0"/>
+				</changes>
+			</patch>
+			<patch id="87" name="Only Second Login Background" type="UI">
+				<desc>Displays always the second login background.</desc>
+				<changes>
+					<byte offset="56f914" old="5f" new="32"/>
+					<byte offset="56f915" old="b9" new="5f"/>
+					<byte offset="56f916" old="e8" new="b9"/>
+					<byte offset="56f917" old="b0" new="e8"/>
+					<byte offset="56f918" old="e6" new="b0"/>
+					<byte offset="56f919" old="25" new="e6"/>
+					<byte offset="56f91a" old="64" new="25"/>
+					<byte offset="56f91b" old="2d" new="64"/>
+					<byte offset="56f91c" old="25" new="2d"/>
+					<byte offset="56f91d" old="64" new="25"/>
+					<byte offset="56f91e" old="2e" new="64"/>
+					<byte offset="56f91f" old="62" new="2e"/>
+					<byte offset="56f920" old="6d" new="62"/>
+					<byte offset="56f921" old="70" new="6d"/>
+					<byte offset="56f922" old="0" new="70"/>
+				</changes>
+			</patch>
+		</patchgroup>
+		<patch id="92" name="Packet First Key Encryption" type="">
+			<desc>Change the 1st key for packet encryption. It needs you don't check the patch Disable Packet Header Encryption. Don't use it if you don't know what you are doing. (Not avaible yet on rathena)&#13;
+															You have to translate the string entered into hex code to add it in your conf file. You can do it here : http://goo.gl/9Pmxf</desc>
+			<input name="$firstkey" type="string" min="8" max="8"/>
+			<changes>
+				<byte offset="44779d" old="8f" new="$firstkey"/>
+			</changes>
+		</patch>
+		<patch id="93" name="Packet Second Key Encryption" type="">
+			<desc>Change the 2nd key for packet encryption. It needs you don't check the patch Disable Packet Header Encryption. Don't use it if you don't know what you are doing. (Not avaible yet on rathena)&#13;
+															You have to translate the string entered into hex code to add it in your conf file. You can do it here : http://goo.gl/9Pmxf</desc>
+			<input name="$secondkey" type="string" min="8" max="8"/>
+			<changes>
+				<byte offset="4477a2" old="8f" new="$secondkey"/>
+			</changes>
+		</patch>
+		<patch id="94" name="Packet Second Key Encryption" type="">
+			<desc>Change the 3rd key for packet encryption. It needs you don't check the patch Disable Packet Header Encryption. Don't use it if you don't know what you are doing. (Not avaible yet on rathena)&#13;
+															You have to translate the string entered into hex code to add it in your conf file. You can do it here : http://goo.gl/9Pmxf</desc>
+			<input name="$thirdkey" type="string" min="8" max="8"/>
+			<changes>
+				<byte offset="4477a7" old="37" new="$thirdkey"/>
+			</changes>
+		</patch>
+		<patch id="67" name="Disable Quake skill effect" type="UI">
+			<desc></desc>
+			<changes>
+				<byte offset="1c01c0" old="55" new="90"/>
+				<byte offset="1c01c1" old="8b" new="90"/>
+				<byte offset="1c01c2" old="ec" new="90"/>
+				<byte offset="1c01c3" old="d9" new="c2"/>
+				<byte offset="1c01c4" old="45" new="c"/>
+				<byte offset="1c01c5" old="8" new="0"/>
+				<byte offset="1c01e0" old="55" new="c2"/>
+				<byte offset="1c01e1" old="8b" new="14"/>
+				<byte offset="1c01e2" old="ec" new="0"/>
+			</changes>
+		</patch>
+		<patch id="35" name="Read Data Folder First" type="Data">
+			<desc>Gives the data directory contents priority over the data/sdata.grf contents.</desc>
+			<changes>
+				<byte offset="1b7ad5" old="74" new="90"/>
+				<byte offset="1b7ad6" old="7" new="90"/>
+				<byte offset="2178d1" old="74" new="90"/>
+				<byte offset="2178d2" old="19" new="90"/>
+			</changes>
+		</patch>
+		<patch id="36" name="Read msgstringtable.txt" type="Data">
+			<desc>This option will force the client to read all the user interface messages from  msgstringtable.txt instead of displaying the korean messages.  (This does not fix the korean images, like buttons.)</desc>
+			<changes>
+				<byte offset="2291c8" old="75" new="eb"/>
+			</changes>
+		</patch>
+		<patch id="37" name="Read questid2display.txt" type="Data">
+			<desc>Makes the client to load questid2display.txt on every langtype (instead of only 0).</desc>
+			<changes>
+				<byte offset="21435c" old="75" new="90"/>
+				<byte offset="21435d" old="5e" new="90"/>
+			</changes>
+		</patch>
+		<patch id="96" name="Remove GM Sprites" type="UI">
+			<desc>Remove the GM sprites and keeping all the functionality like yellow name and admin right click.</desc>
+			<changes>
+				<byte offset="453237" old="f" new="90"/>
+				<byte offset="453238" old="84" new="e9"/>
+				<byte offset="453457" old="f" new="90"/>
+				<byte offset="453458" old="84" new="e9"/>
+			</changes>
+		</patch>
+		<patch id="38" name="Remove Gravity Ads" type="UI">
+			<desc>Removes Gravity ads on the login background.</desc>
+			<changes>
+				<byte offset="56f8cf" old="54" new="0"/>
+				<byte offset="56f8d0" old="5f" new="0"/>
+				<byte offset="56f8d1" old="c1" new="0"/>
+				<byte offset="56f8d2" old="df" new="0"/>
+				<byte offset="56f8d3" old="b7" new="0"/>
+				<byte offset="56f8d4" old="c2" new="0"/>
+				<byte offset="56f8d5" old="bc" new="0"/>
+				<byte offset="56f8d6" old="ba" new="0"/>
+				<byte offset="56f8d7" old="c0" new="0"/>
+				<byte offset="56f8d8" old="ce" new="0"/>
+				<byte offset="56f8d9" old="2e" new="0"/>
+				<byte offset="56f8da" old="74" new="0"/>
+				<byte offset="56f8db" old="67" new="0"/>
+				<byte offset="56f8dc" old="61" new="0"/>
+				<byte offset="55db17" old="54" new="0"/>
+				<byte offset="55db18" old="5f" new="0"/>
+				<byte offset="55db19" old="47" new="0"/>
+				<byte offset="55db1a" old="61" new="0"/>
+				<byte offset="55db1b" old="6d" new="0"/>
+				<byte offset="55db1c" old="65" new="0"/>
+				<byte offset="55db1d" old="47" new="0"/>
+				<byte offset="55db1e" old="72" new="0"/>
+				<byte offset="55db1f" old="61" new="0"/>
+				<byte offset="55db20" old="64" new="0"/>
+				<byte offset="55db21" old="65" new="0"/>
+				<byte offset="55db22" old="2e" new="0"/>
+				<byte offset="55db23" old="74" new="0"/>
+				<byte offset="55db24" old="67" new="0"/>
+				<byte offset="55db25" old="61" new="0"/>
+				<byte offset="56f8f7" old="54" new="0"/>
+				<byte offset="56f8f8" old="5f" new="0"/>
+				<byte offset="56f8f9" old="c5" new="0"/>
+				<byte offset="56f8fa" old="d7" new="0"/>
+				<byte offset="56f8fb" old="c0" new="0"/>
+				<byte offset="56f8fc" old="d4" new="0"/>
+				<byte offset="56f8fd" old="25" new="0"/>
+				<byte offset="56f8fe" old="64" new="0"/>
+				<byte offset="56f8ff" old="2e" new="0"/>
+				<byte offset="56f900" old="74" new="0"/>
+				<byte offset="56f901" old="67" new="0"/>
+			</changes>
+		</patch>
+		<patch id="39" name="Remove Gravity Logo" type="UI">
+			<desc>Removes Gravity Logo on the login background.</desc>
+			<changes>
+				<byte offset="56f887" old="54" new="0"/>
+				<byte offset="56f888" old="5f" new="0"/>
+				<byte offset="56f889" old="52" new="0"/>
+				<byte offset="56f88a" old="25" new="0"/>
+				<byte offset="56f88b" old="64" new="0"/>
+				<byte offset="56f88c" old="2e" new="0"/>
+				<byte offset="56f88d" old="74" new="0"/>
+				<byte offset="56f88e" old="67" new="0"/>
+				<byte offset="56f88f" old="61" new="0"/>
+			</changes>
+		</patch>
+		<patch id="73" name="Remove Hourly Annonce" type="UI">
+			<desc>Remove hourly game grade and hourly play time minder annonce</desc>
+			<changes>
+				<byte offset="225d8" old="75" new="eb"/>
+				<byte offset="42555b" old="f" new="90"/>
+				<byte offset="42555c" old="84" new="e9"/>
+			</changes>
+		</patch>
+		<patch id="84" name="Remove Serial Display" type="UI">
+			<desc>Removes the display of the client serial number in the login window (bottom right corner).</desc>
+			<changes>
+				<byte offset="1751dd" old="83" new="31"/>
+				<byte offset="1751df" old="50" new="83"/>
+				<byte offset="1751e0" old="3b" new="f8"/>
+				<byte offset="1751e1" old="41" new="1"/>
+				<byte offset="1751e2" old="28" new="90"/>
+			</changes>
+		</patch>
+		<patch id="40" name="Restore Login Window" type="Fix">
+			<desc>Circumvents Gravity's new token-based login system and restores the normal login window</desc>
+			<changes>
+				<byte offset="446706" old="80" new="6a"/>
+				<byte offset="446707" old="3d" new="3"/>
+				<byte offset="446708" old="0" new="b9"/>
+				<byte offset="446709" old="b2" new="78"/>
+				<byte offset="44670a" old="c9" new="4"/>
+				<byte offset="44670b" old="0" new="b0"/>
+				<byte offset="44670d" old="74" new="e8"/>
+				<byte offset="44670e" old="13" new="2e"/>
+				<byte offset="44670f" old="c6" new="14"/>
+				<byte offset="446710" old="5" new="d4"/>
+				<byte offset="446711" old="0" new="ff"/>
+				<byte offset="446712" old="b2" new="90"/>
+				<byte offset="446713" old="c9" new="90"/>
+				<byte offset="446714" old="0" new="90"/>
+				<byte offset="446715" old="0" new="90"/>
+				<byte offset="446716" old="c7" new="90"/>
+				<byte offset="446717" old="43" new="90"/>
+				<byte offset="446718" old="c" new="90"/>
+				<byte offset="446719" old="4" new="90"/>
+				<byte offset="44671a" old="0" new="90"/>
+				<byte offset="44671b" old="0" new="90"/>
+				<byte offset="44671c" old="0" new="90"/>
+				<byte offset="447019" old="f" new="90"/>
+				<byte offset="44701a" old="84" new="90"/>
+				<byte offset="44701b" old="3b" new="90"/>
+				<byte offset="44701c" old="1" new="90"/>
+				<byte offset="44701d" old="0" new="90"/>
+				<byte offset="44701e" old="0" new="90"/>
+				<byte offset="447022" old="f" new="90"/>
+				<byte offset="447023" old="84" new="90"/>
+				<byte offset="447024" old="32" new="90"/>
+				<byte offset="447025" old="1" new="90"/>
+				<byte offset="447026" old="0" new="90"/>
+				<byte offset="447027" old="0" new="90"/>
+				<byte offset="1b9532" old="f1" new="4c"/>
+				<byte offset="1b9533" old="8b" new="e4"/>
+				<byte offset="1b9534" old="46" new="10"/>
+				<byte offset="1b9535" old="4" new="52"/>
+				<byte offset="1b9536" old="c7" new="50"/>
+				<byte offset="1b9537" old="40" new="50"/>
+				<byte offset="1b9538" old="14" new="8b"/>
+				<byte offset="1b9539" old="0" new="11"/>
+				<byte offset="1b953a" old="0" new="8b"/>
+				<byte offset="1b953b" old="0" new="42"/>
+				<byte offset="1b953c" old="0" new="18"/>
+				<byte offset="1b953d" old="83" new="6a"/>
+				<byte offset="1b953e" old="3d" new="0"/>
+				<byte offset="1b953f" old="94" new="6a"/>
+				<byte offset="1b9540" old="5c" new="0"/>
+				<byte offset="1b9541" old="c4" new="6a"/>
+				<byte offset="1b9543" old="b" new="68"/>
+				<byte offset="1b9544" old="75" new="1d"/>
+				<byte offset="1b9545" old="1d" new="27"/>
+				<byte offset="1b9546" old="8b" new="0"/>
+				<byte offset="1b9547" old="d" new="0"/>
+				<byte offset="1b9548" old="3c" new="c7"/>
+				<byte offset="1b9549" old="be" new="41"/>
+				<byte offset="1b954a" old="c9" new="c"/>
+				<byte offset="1b954b" old="0" new="3"/>
+				<byte offset="1b954c" old="6a" new="0"/>
+				<byte offset="1b954d" old="1" new="0"/>
+				<byte offset="1b954e" old="6a" new="0"/>
+				<byte offset="1b954f" old="0" new="ff"/>
+				<byte offset="1b9550" old="6a" new="d0"/>
+				<byte offset="1b9551" old="0" new="58"/>
+				<byte offset="1b9552" old="68" new="5a"/>
+				<byte offset="1b9553" old="f0" new="90"/>
+				<byte offset="1b9554" old="22" new="90"/>
+				<byte offset="1b9555" old="97" new="90"/>
+				<byte offset="1b9556" old="0" new="90"/>
+				<byte offset="1b9557" old="68" new="90"/>
+				<byte offset="1b9558" old="88" new="90"/>
+				<byte offset="1b9559" old="3a" new="90"/>
+				<byte offset="1b955a" old="96" new="90"/>
+				<byte offset="1b955b" old="0" new="90"/>
+				<byte offset="1b955c" old="51" new="90"/>
+				<byte offset="1b955d" old="ff" new="90"/>
+				<byte offset="1b955e" old="15" new="90"/>
+				<byte offset="1b955f" old="b4" new="90"/>
+				<byte offset="1b9560" old="c6" new="90"/>
+				<byte offset="1b9561" old="95" new="90"/>
+				<byte offset="1b9562" old="0" new="90"/>
+				<byte offset="1b9563" old="c7" new="90"/>
+				<byte offset="1b9564" old="6" new="90"/>
+				<byte offset="1b9565" old="0" new="90"/>
+				<byte offset="1b9566" old="0" new="90"/>
+				<byte offset="1b9567" old="0" new="90"/>
+				<byte offset="1b9568" old="0" new="90"/>
+				<byte offset="4b9174" old="ff" new="31"/>
+				<byte offset="4b9175" old="15" new="c0"/>
+				<byte offset="4b9176" old="a0" new="90"/>
+				<byte offset="4b9177" old="be" new="90"/>
+				<byte offset="4b9178" old="c9" new="90"/>
+				<byte offset="4b9179" old="0" new="90"/>
+			</changes>
+		</patch>
+		<patch id="41" name="Disable Nagle Algorithm" type="Add">
+			<desc>Disables the Nagle Algorithm.&#13;
+The Nagle Algorithm queues packets before they are sent in order to minimize protocol overhead. Disabling the algorithm will slightly increase network traffic, but it will decrease latency as well.&#13;
+See http://en.wikipedia.org/wiki/Nagle%27s_algorithm</desc>
+			<changes>
+				<byte offset="4b7a30" old="34" new="63"/>
+				<byte offset="4b7a31" old="c8" new="bd"/>
+				<byte offset="366afb" old="ff" new="e8"/>
+				<byte offset="366afc" old="15" new="63"/>
+				<byte offset="366afd" old="34" new="44"/>
+				<byte offset="366afe" old="c8" new="1f"/>
+				<byte offset="366aff" old="95" new="0"/>
+				<byte offset="366b00" old="0" new="90"/>
+				<byte offset="43ce1f" old="ff" new="e8"/>
+				<byte offset="43ce20" old="15" new="3f"/>
+				<byte offset="43ce21" old="34" new="e1"/>
+				<byte offset="43ce22" old="c8" new="11"/>
+				<byte offset="43ce23" old="95" new="0"/>
+				<byte offset="43ce24" old="0" new="90"/>
+				<byte offset="55af63" old="0" new="55"/>
+				<byte offset="55af64" old="0" new="8b"/>
+				<byte offset="55af65" old="0" new="ec"/>
+				<byte offset="55af66" old="0" new="83"/>
+				<byte offset="55af67" old="0" new="ec"/>
+				<byte offset="55af68" old="0" new="c"/>
+				<byte offset="55af69" old="0" new="c7"/>
+				<byte offset="55af6a" old="0" new="45"/>
+				<byte offset="55af6b" old="0" new="f8"/>
+				<byte offset="55af6c" old="0" new="1"/>
+				<byte offset="55af70" old="0" new="8b"/>
+				<byte offset="55af71" old="0" new="45"/>
+				<byte offset="55af72" old="0" new="10"/>
+				<byte offset="55af73" old="0" new="50"/>
+				<byte offset="55af74" old="0" new="8b"/>
+				<byte offset="55af75" old="0" new="4d"/>
+				<byte offset="55af76" old="0" new="c"/>
+				<byte offset="55af77" old="0" new="51"/>
+				<byte offset="55af78" old="0" new="8b"/>
+				<byte offset="55af79" old="0" new="55"/>
+				<byte offset="55af7a" old="0" new="8"/>
+				<byte offset="55af7b" old="0" new="52"/>
+				<byte offset="55af7c" old="0" new="a1"/>
+				<byte offset="55af7d" old="0" new="34"/>
+				<byte offset="55af7e" old="0" new="c8"/>
+				<byte offset="55af7f" old="0" new="95"/>
+				<byte offset="55af81" old="0" new="ff"/>
+				<byte offset="55af82" old="0" new="d0"/>
+				<byte offset="55af83" old="0" new="89"/>
+				<byte offset="55af84" old="0" new="45"/>
+				<byte offset="55af85" old="0" new="fc"/>
+				<byte offset="55af86" old="0" new="83"/>
+				<byte offset="55af87" old="0" new="7d"/>
+				<byte offset="55af88" old="0" new="fc"/>
+				<byte offset="55af89" old="0" new="ff"/>
+				<byte offset="55af8a" old="0" new="74"/>
+				<byte offset="55af8b" old="0" new="35"/>
+				<byte offset="55af8c" old="0" new="68"/>
+				<byte offset="55af8d" old="0" new="ca"/>
+				<byte offset="55af8e" old="0" new="bd"/>
+				<byte offset="55af8f" old="0" new="95"/>
+				<byte offset="55af91" old="0" new="68"/>
+				<byte offset="55af92" old="0" new="d5"/>
+				<byte offset="55af93" old="0" new="bd"/>
+				<byte offset="55af94" old="0" new="95"/>
+				<byte offset="55af96" old="0" new="8b"/>
+				<byte offset="55af97" old="0" new="d"/>
+				<byte offset="55af98" old="0" new="8"/>
+				<byte offset="55af99" old="0" new="c2"/>
+				<byte offset="55af9a" old="0" new="95"/>
+				<byte offset="55af9c" old="0" new="ff"/>
+				<byte offset="55af9d" old="0" new="d1"/>
+				<byte offset="55af9e" old="0" new="50"/>
+				<byte offset="55af9f" old="0" new="8b"/>
+				<byte offset="55afa0" old="0" new="15"/>
+				<byte offset="55afa1" old="0" new="d4"/>
+				<byte offset="55afa2" old="0" new="c1"/>
+				<byte offset="55afa3" old="0" new="95"/>
+				<byte offset="55afa5" old="0" new="ff"/>
+				<byte offset="55afa6" old="0" new="d2"/>
+				<byte offset="55afa7" old="0" new="89"/>
+				<byte offset="55afa8" old="0" new="45"/>
+				<byte offset="55afa9" old="0" new="f4"/>
+				<byte offset="55afaa" old="0" new="83"/>
+				<byte offset="55afab" old="0" new="7d"/>
+				<byte offset="55afac" old="0" new="f4"/>
+				<byte offset="55afae" old="0" new="74"/>
+				<byte offset="55afaf" old="0" new="11"/>
+				<byte offset="55afb0" old="0" new="6a"/>
+				<byte offset="55afb1" old="0" new="4"/>
+				<byte offset="55afb2" old="0" new="8d"/>
+				<byte offset="55afb3" old="0" new="45"/>
+				<byte offset="55afb4" old="0" new="f8"/>
+				<byte offset="55afb5" old="0" new="50"/>
+				<byte offset="55afb6" old="0" new="6a"/>
+				<byte offset="55afb7" old="0" new="1"/>
+				<byte offset="55afb8" old="0" new="6a"/>
+				<byte offset="55afb9" old="0" new="6"/>
+				<byte offset="55afba" old="0" new="8b"/>
+				<byte offset="55afbb" old="0" new="4d"/>
+				<byte offset="55afbc" old="0" new="fc"/>
+				<byte offset="55afbd" old="0" new="51"/>
+				<byte offset="55afbe" old="0" new="ff"/>
+				<byte offset="55afbf" old="0" new="55"/>
+				<byte offset="55afc0" old="0" new="f4"/>
+				<byte offset="55afc1" old="0" new="8b"/>
+				<byte offset="55afc2" old="0" new="45"/>
+				<byte offset="55afc3" old="0" new="fc"/>
+				<byte offset="55afc4" old="0" new="8b"/>
+				<byte offset="55afc5" old="0" new="e5"/>
+				<byte offset="55afc6" old="0" new="5d"/>
+				<byte offset="55afc7" old="0" new="c2"/>
+				<byte offset="55afc8" old="0" new="c"/>
+				<byte offset="55afca" old="0" new="73"/>
+				<byte offset="55afcb" old="0" new="65"/>
+				<byte offset="55afcc" old="0" new="74"/>
+				<byte offset="55afcd" old="0" new="73"/>
+				<byte offset="55afce" old="0" new="6f"/>
+				<byte offset="55afcf" old="0" new="63"/>
+				<byte offset="55afd0" old="0" new="6b"/>
+				<byte offset="55afd1" old="0" new="6f"/>
+				<byte offset="55afd2" old="0" new="70"/>
+				<byte offset="55afd3" old="0" new="74"/>
+				<byte offset="55afd5" old="0" new="57"/>
+				<byte offset="55afd6" old="0" new="53"/>
+				<byte offset="55afd7" old="0" new="32"/>
+				<byte offset="55afd8" old="0" new="5f"/>
+				<byte offset="55afd9" old="0" new="33"/>
+				<byte offset="55afda" old="0" new="32"/>
+				<byte offset="55afdb" old="0" new="2e"/>
+				<byte offset="55afdc" old="0" new="44"/>
+				<byte offset="55afdd" old="0" new="4c"/>
+				<byte offset="55afde" old="0" new="4c"/>
+			</changes>
+		</patch>
+		<patchgroup id="78" name="Shared Body Palettes">
+			<patch id="80" name="Shared Body Palettes Type1" type="UI">
+				<desc>Makes the client use a single cloth palette set (body_%s_%d.pal) for all job classes but seperate for both genders</desc>
+				<changes>
+					<byte offset="55afe5" old="0" new="62"/>
+					<byte offset="55afe6" old="0" new="6f"/>
+					<byte offset="55afe7" old="0" new="64"/>
+					<byte offset="55afe8" old="0" new="79"/>
+					<byte offset="55afe9" old="0" new="25"/>
+					<byte offset="55afea" old="0" new="2e"/>
+					<byte offset="55afeb" old="0" new="73"/>
+					<byte offset="55afec" old="0" new="5f"/>
+					<byte offset="55afed" old="0" new="25"/>
+					<byte offset="55afee" old="0" new="73"/>
+					<byte offset="55afef" old="0" new="5f"/>
+					<byte offset="55aff0" old="0" new="25"/>
+					<byte offset="55aff1" old="0" new="64"/>
+					<byte offset="55aff2" old="0" new="2e"/>
+					<byte offset="55aff3" old="0" new="70"/>
+					<byte offset="55aff4" old="0" new="61"/>
+					<byte offset="55aff5" old="0" new="6c"/>
+					<byte offset="2a20d0" old="48" new="e5"/>
+					<byte offset="2a20d1" old="1" new="bd"/>
+					<byte offset="2a20d2" old="99" new="95"/>
+				</changes>
+			</patch>
+			<patch id="79" name="Shared Body Palettes Type2" type="UI">
+				<desc>Makes the client use a single cloth palette set (body_%d.pal) for all job classes both genders</desc>
+				<changes>
+					<byte offset="55aff7" old="0" new="62"/>
+					<byte offset="55aff8" old="0" new="6f"/>
+					<byte offset="55aff9" old="0" new="64"/>
+					<byte offset="55affa" old="0" new="79"/>
+					<byte offset="55affb" old="0" new="25"/>
+					<byte offset="55affc" old="0" new="2e"/>
+					<byte offset="55affd" old="0" new="73"/>
+					<byte offset="55affe" old="0" new="25"/>
+					<byte offset="55afff" old="0" new="2e"/>
+					<byte offset="55b000" old="0" new="73"/>
+					<byte offset="55b001" old="0" new="5f"/>
+					<byte offset="55b002" old="0" new="25"/>
+					<byte offset="55b003" old="0" new="64"/>
+					<byte offset="55b004" old="0" new="2e"/>
+					<byte offset="55b005" old="0" new="70"/>
+					<byte offset="55b006" old="0" new="61"/>
+					<byte offset="55b007" old="0" new="6c"/>
+					<byte offset="2a20d0" old="48" new="f7"/>
+					<byte offset="2a20d1" old="1" new="bd"/>
+					<byte offset="2a20d2" old="99" new="95"/>
+				</changes>
+			</patch>
+		</patchgroup>
+		<patchgroup id="81" name="Shared Head Palettes">
+			<patch id="82" name="Shared Head Palettes Type1" type="UI">
+				<desc>Makes the client use a single hair palette set (head_%s_%d.pal) for all job classes but seperate for both genders</desc>
+				<changes>
+					<byte offset="58f330" old="b8" new="68"/>
+					<byte offset="58f331" old="d3" new="65"/>
+					<byte offset="58f332" old="b8" new="61"/>
+					<byte offset="58f333" old="ae" new="64"/>
+					<byte offset="58f334" old="5c" new="25"/>
+					<byte offset="58f335" old="b8" new="2e"/>
+					<byte offset="58f336" old="d3" new="73"/>
+					<byte offset="58f337" old="b8" new="5f"/>
+					<byte offset="58f338" old="ae" new="25"/>
+					<byte offset="58f339" old="25" new="73"/>
+					<byte offset="58f33a" old="73" new="5f"/>
+					<byte offset="58f33b" old="5f" new="25"/>
+					<byte offset="58f33c" old="25" new="64"/>
+					<byte offset="58f33d" old="73" new="2e"/>
+					<byte offset="58f33e" old="5f" new="70"/>
+					<byte offset="58f33f" old="25" new="61"/>
+					<byte offset="58f340" old="64" new="6c"/>
+					<byte offset="58f341" old="2e" new="0"/>
+				</changes>
+			</patch>
+			<patch id="83" name="Shared Head Palettes Type2" type="UI">
+				<desc>Makes the client use a single hair palette set (head_%d.pal) for all job classes both genders</desc>
+				<changes>
+					<byte offset="58f330" old="b8" new="68"/>
+					<byte offset="58f331" old="d3" new="65"/>
+					<byte offset="58f332" old="b8" new="61"/>
+					<byte offset="58f333" old="ae" new="64"/>
+					<byte offset="58f334" old="5c" new="25"/>
+					<byte offset="58f335" old="b8" new="2e"/>
+					<byte offset="58f336" old="d3" new="73"/>
+					<byte offset="58f337" old="b8" new="25"/>
+					<byte offset="58f338" old="ae" new="2e"/>
+					<byte offset="58f339" old="25" new="73"/>
+					<byte offset="58f33a" old="73" new="5f"/>
+					<byte offset="58f33b" old="5f" new="25"/>
+					<byte offset="58f33c" old="25" new="64"/>
+					<byte offset="58f33d" old="73" new="2e"/>
+					<byte offset="58f33e" old="5f" new="70"/>
+					<byte offset="58f33f" old="25" new="61"/>
+					<byte offset="58f340" old="64" new="6c"/>
+					<byte offset="58f341" old="2e" new="0"/>
+				</changes>
+			</patch>
+		</patchgroup>
+		<patch id="50" name="Skip License Screen" type="UI">
+			<desc>Skip the warning screen and goes directly to the main window with the Service Select.</desc>
+			<changes>
+				<byte offset="447f40" old="20" new="cd"/>
+				<byte offset="447f41" old="71" new="72"/>
+				<byte offset="447f44" old="96" new="cd"/>
+				<byte offset="447f45" old="71" new="72"/>
+			</changes>
+		</patch>
+		<patch id="42" name="Skip Resurrection Buttons" type="UI">
+			<desc>Skip resurrection button when you die or use Token of Ziegfried.</desc>
+			<changes>
+				<byte offset="3d08c3" old="c5" new="ff"/>
+				<byte offset="3d08c4" old="1d" new="ff"/>
+			</changes>
+		</patch>
+		<patch id="95" name="Use SSO Login Packet" type="">
+			<desc>Enable using SSO packet on all langtype (to use login and pass with a launcher)</desc>
+			<changes>
+				<byte offset="447019" old="f" new="90"/>
+				<byte offset="44701a" old="84" new="e9"/>
+			</changes>
+		</patch>
+		<patch id="44" name="Translate Client In English" type="UI">
+			<desc>This will translate some of the hardcoded Korean phrases to English</desc>
+			<changes>
+				<byte offset="576e34" old="25" new="44"/>
+				<byte offset="576e35" old="64" new="65"/>
+				<byte offset="576e36" old="bf" new="6c"/>
+				<byte offset="576e37" old="f9" new="65"/>
+				<byte offset="576e38" old="20" new="74"/>
+				<byte offset="576e39" old="25" new="65"/>
+				<byte offset="576e3a" old="64" new="3a"/>
+				<byte offset="576e3b" old="c0" new="20"/>
+				<byte offset="576e3c" old="cf" new="25"/>
+				<byte offset="576e3d" old="20" new="64"/>
+				<byte offset="576e3e" old="25" new="2f"/>
+				<byte offset="576e3f" old="64" new="25"/>
+				<byte offset="576e40" old="bd" new="64"/>
+				<byte offset="576e41" old="c3" new="20"/>
+				<byte offset="576e42" old="20" new="2d"/>
+				<byte offset="576e43" old="25" new="20"/>
+				<byte offset="576e44" old="64" new="25"/>
+				<byte offset="576e45" old="ba" new="64"/>
+				<byte offset="576e46" old="d0" new="3a"/>
+				<byte offset="576e47" old="20" new="25"/>
+				<byte offset="576e48" old="25" new="64"/>
+				<byte offset="576e49" old="64" new="3a"/>
+				<byte offset="576e4a" old="c3" new="25"/>
+				<byte offset="576e4b" old="ca" new="64"/>
+				<byte offset="59bc0a" old="b3" new="2f"/>
+				<byte offset="59bc0b" old="e2" new="25"/>
+				<byte offset="59bc0c" old="20" new="64"/>
+				<byte offset="59bc0d" old="25" new="2f"/>
+				<byte offset="59bc0e" old="64" new="25"/>
+				<byte offset="59bc0f" old="bf" new="64"/>
+				<byte offset="59bc10" old="f9" new="20"/>
+				<byte offset="59bc11" old="20" new="2d"/>
+				<byte offset="59bc12" old="25" new="20"/>
+				<byte offset="59bc13" old="64" new="25"/>
+				<byte offset="59bc14" old="c0" new="64"/>
+				<byte offset="59bc15" old="cf" new="3a"/>
+				<byte offset="59bc16" old="20" new="25"/>
+				<byte offset="59bc17" old="25" new="64"/>
+				<byte offset="59bc18" old="64" new="3a"/>
+				<byte offset="59bc19" old="bd" new="25"/>
+				<byte offset="59bc1a" old="c3" new="64"/>
+				<byte offset="59bc1b" old="20" new="0"/>
+				<byte offset="561ac0" old="b8" new="4d"/>
+				<byte offset="561ac1" old="de" new="65"/>
+				<byte offset="561ac2" old="bd" new="73"/>
+				<byte offset="561ac3" old="c3" new="73"/>
+				<byte offset="561ac4" old="c1" new="61"/>
+				<byte offset="561ac5" old="f6" new="67"/>
+				<byte offset="561ac6" old="0" new="65"/>
+				<byte offset="563bdd" old="c4" new="55"/>
+				<byte offset="563bde" old="b3" new="73"/>
+				<byte offset="563bdf" old="b8" new="65"/>
+				<byte offset="563be0" old="af" new="64"/>
+				<byte offset="563be1" old="c5" new="20"/>
+				<byte offset="563be2" old="cd" new="2f"/>
+				<byte offset="563be3" old="2f" new="20"/>
+				<byte offset="563be4" old="c3" new="54"/>
+				<byte offset="563be5" old="d1" new="6f"/>
+				<byte offset="563be6" old="20" new="74"/>
+				<byte offset="563be7" old="bd" new="61"/>
+				<byte offset="563be8" old="bd" new="6c"/>
+				<byte offset="563be9" old="b7" new="29"/>
+				<byte offset="563bea" old="d4" new="0"/>
+				<byte offset="56d37b" old="c4" new="50"/>
+				<byte offset="56d37c" old="b3" new="6f"/>
+				<byte offset="56d37d" old="bd" new="69"/>
+				<byte offset="56d37e" old="c3" new="6e"/>
+				<byte offset="56d37f" old="0" new="74"/>
+				<byte offset="56d380" old="54" new="73"/>
+				<byte offset="56d381" old="6f" new="0"/>
+				<byte offset="44021c" old="75" new="eb"/>
+				<byte offset="56c2e4" old="be" new="49"/>
+				<byte offset="56c2e5" old="c6" new="74"/>
+				<byte offset="56c2e6" old="c0" new="65"/>
+				<byte offset="56c2e7" old="cc" new="6d"/>
+				<byte offset="56c2e8" old="c5" new="20"/>
+				<byte offset="56c2e9" old="db" new="43"/>
+				<byte offset="56c2ea" old="20" new="6d"/>
+				<byte offset="56c2eb" old="ba" new="70"/>
+				<byte offset="56c2ec" old="f1" new="61"/>
+				<byte offset="56c2ed" old="b1" new="72"/>
+				<byte offset="56c2ee" old="b3" new="65"/>
+				<byte offset="5762c0" old="b0" new="45"/>
+				<byte offset="5762c1" old="cb" new="6e"/>
+				<byte offset="5762c2" old="bb" new="74"/>
+				<byte offset="5762c3" old="f6" new="65"/>
+				<byte offset="5762c4" old="20" new="72"/>
+				<byte offset="5762c5" old="b4" new="20"/>
+				<byte offset="5762c6" old="dc" new="73"/>
+				<byte offset="5762c7" old="be" new="65"/>
+				<byte offset="5762c8" old="ee" new="61"/>
+				<byte offset="5762c9" old="20" new="72"/>
+				<byte offset="5762ca" old="bc" new="63"/>
+				<byte offset="5762cb" old="b3" new="68"/>
+				<byte offset="5762cc" old="c1" new="20"/>
+				<byte offset="5762cd" old="a4" new="73"/>
+				<byte offset="5762ce" old="20" new="74"/>
+				<byte offset="5762cf" old="28" new="72"/>
+				<byte offset="5762d0" old="45" new="69"/>
+				<byte offset="5762d1" old="78" new="6e"/>
+				<byte offset="5762d2" old="3a" new="67"/>
+				<byte offset="5762d3" old="20" new="2e"/>
+				<byte offset="5762d4" old="b4" new="2e"/>
+				<byte offset="5762d5" old="dc" new="2e"/>
+				<byte offset="57ecd4" old="b0" new="46"/>
+				<byte offset="57ecd5" old="cb" new="69"/>
+				<byte offset="57ecd6" old="bb" new="6e"/>
+				<byte offset="57ecd7" old="f6" new="64"/>
+				<byte offset="576354" old="b1" new="42"/>
+				<byte offset="576355" old="e6" new="61"/>
+				<byte offset="576356" old="20" new="63"/>
+				<byte offset="576357" old="c1" new="6b"/>
+				<byte offset="576358" old="a4" new="20"/>
+				<byte offset="576359" old="ba" new="74"/>
+				<byte offset="57635a" old="b8" new="6f"/>
+				<byte offset="57635b" old="0" new="20"/>
+				<byte offset="57635c" old="b8" new="4e"/>
+				<byte offset="57635d" old="f1" new="61"/>
+				<byte offset="57635e" old="c7" new="76"/>
+				<byte offset="57635f" old="a5" new="69"/>
+				<byte offset="576360" old="b7" new="67"/>
+				<byte offset="576361" old="ce" new="61"/>
+				<byte offset="576362" old="20" new="74"/>
+				<byte offset="576363" old="be" new="69"/>
+				<byte offset="576364" old="c8" new="6f"/>
+				<byte offset="576365" old="b3" new="6e"/>
+				<byte offset="576366" old="bb" new="0"/>
+				<byte offset="576348" old="b0" new="56"/>
+				<byte offset="576349" old="cb" new="69"/>
+				<byte offset="57634a" old="bb" new="65"/>
+				<byte offset="57634b" old="f6" new="77"/>
+				<byte offset="57634d" old="c1" new="4c"/>
+				<byte offset="57634e" old="a4" new="69"/>
+				<byte offset="57634f" old="ba" new="73"/>
+				<byte offset="576350" old="b8" new="74"/>
+				<byte offset="576338" old="ba" new="54"/>
+				<byte offset="576339" old="b8" new="6f"/>
+				<byte offset="57633a" old="b1" new="67"/>
+				<byte offset="57633b" old="e2" new="67"/>
+				<byte offset="57633c" old="20" new="6c"/>
+				<byte offset="57633d" old="b8" new="65"/>
+				<byte offset="57633e" old="f0" new="20"/>
+				<byte offset="57633f" old="b5" new="4d"/>
+				<byte offset="576340" old="e5" new="69"/>
+				<byte offset="576341" old="20" new="6e"/>
+				<byte offset="576342" old="ba" new="69"/>
+				<byte offset="576343" old="af" new="6d"/>
+				<byte offset="576344" old="b0" new="61"/>
+				<byte offset="576345" old="e6" new="70"/>
+				<byte offset="564db0" old="c0" new="4d"/>
+				<byte offset="564db1" old="fc" new="6f"/>
+				<byte offset="564db2" old="c0" new="72"/>
+				<byte offset="564db3" old="e5" new="65"/>
+				<byte offset="575c0c" old="bc" new="57"/>
+				<byte offset="575c0d" old="f6" new="61"/>
+				<byte offset="575c0e" old="bc" new="74"/>
+				<byte offset="575c0f" old="d3" new="65"/>
+				<byte offset="575c10" old="bc" new="72"/>
+				<byte offset="575c11" old="ba" new="0"/>
+				<byte offset="575c12" old="25" new="0"/>
+				<byte offset="575c13" old="64" new="0"/>
+				<byte offset="575c00" old="c1" new="45"/>
+				<byte offset="575c01" old="f6" new="61"/>
+				<byte offset="575c02" old="bc" new="72"/>
+				<byte offset="575c03" old="d3" new="74"/>
+				<byte offset="575c04" old="bc" new="68"/>
+				<byte offset="575c05" old="ba" new="0"/>
+				<byte offset="575c06" old="25" new="0"/>
+				<byte offset="575c07" old="64" new="0"/>
+				<byte offset="575bc4" old="be" new="53"/>
+				<byte offset="575bc5" old="cf" new="68"/>
+				<byte offset="575bc6" old="bc" new="64"/>
+				<byte offset="575bc7" old="d3" new="77"/>
+				<byte offset="575bc8" old="bc" new="0"/>
+				<byte offset="575bc9" old="ba" new="0"/>
+				<byte offset="575bca" old="25" new="0"/>
+				<byte offset="575bcb" old="64" new="0"/>
+				<byte offset="575bf4" old="c8" new="46"/>
+				<byte offset="575bf5" old="ad" new="69"/>
+				<byte offset="575bf6" old="bc" new="72"/>
+				<byte offset="575bf7" old="d3" new="65"/>
+				<byte offset="575bf8" old="bc" new="0"/>
+				<byte offset="575bf9" old="ba" new="0"/>
+				<byte offset="575bfa" old="25" new="0"/>
+				<byte offset="575bfb" old="64" new="0"/>
+				<byte offset="575bb8" old="bf" new="47"/>
+				<byte offset="575bb9" old="b0" new="68"/>
+				<byte offset="575bba" old="bc" new="6f"/>
+				<byte offset="575bbb" old="d3" new="73"/>
+				<byte offset="575bbc" old="bc" new="74"/>
+				<byte offset="575bbd" old="ba" new="0"/>
+				<byte offset="575bbe" old="25" new="0"/>
+				<byte offset="575bbf" old="64" new="0"/>
+				<byte offset="575be8" old="c7" new="57"/>
+				<byte offset="575be9" old="b3" new="69"/>
+				<byte offset="575bea" old="bc" new="6e"/>
+				<byte offset="575beb" old="d3" new="64"/>
+				<byte offset="575bec" old="bc" new="0"/>
+				<byte offset="575bed" old="ba" new="0"/>
+				<byte offset="575bee" old="25" new="0"/>
+				<byte offset="575bef" old="64" new="0"/>
+				<byte offset="575bdc" old="b5" new="50"/>
+				<byte offset="575bdd" old="b6" new="6f"/>
+				<byte offset="575bde" old="bc" new="69"/>
+				<byte offset="575bdf" old="d3" new="73"/>
+				<byte offset="575be0" old="bc" new="0"/>
+				<byte offset="575be1" old="ba" new="0"/>
+				<byte offset="575be2" old="25" new="0"/>
+				<byte offset="575be3" old="64" new="0"/>
+				<byte offset="575bd0" old="bc" new="48"/>
+				<byte offset="575bd1" old="ba" new="6f"/>
+				<byte offset="575bd2" old="bc" new="6c"/>
+				<byte offset="575bd3" old="d3" new="79"/>
+				<byte offset="575bd4" old="bc" new="0"/>
+				<byte offset="575bd5" old="ba" new="0"/>
+				<byte offset="575bd6" old="25" new="0"/>
+				<byte offset="575bd7" old="64" new="0"/>
+				<byte offset="575ba0" old="b9" new="4e"/>
+				<byte offset="575ba1" old="ab" new="65"/>
+				<byte offset="575ba2" old="bc" new="75"/>
+				<byte offset="575ba3" old="d3" new="74"/>
+				<byte offset="575ba4" old="bc" new="72"/>
+				<byte offset="575ba5" old="ba" new="0"/>
+				<byte offset="575ba6" old="25" new="0"/>
+				<byte offset="575ba7" old="64" new="0"/>
+				<byte offset="575b90" old="b4" new="42"/>
+				<byte offset="575b91" old="eb" new="69"/>
+				<byte offset="575b92" old="c7" new="67"/>
+				<byte offset="575b93" old="fc" new="0"/>
+				<byte offset="575b98" old="c1" new="4d"/>
+				<byte offset="575b99" old="df" new="65"/>
+				<byte offset="575b9a" old="c7" new="64"/>
+				<byte offset="575b9b" old="fc" new="0"/>
+				<byte offset="575b88" old="bc" new="53"/>
+				<byte offset="575b89" old="d2" new="6d"/>
+				<byte offset="575b8a" old="c7" new="61"/>
+				<byte offset="575b8b" old="fc" new="6c"/>
+				<byte offset="575b58" old="be" new="44"/>
+				<byte offset="575b59" old="c7" new="65"/>
+				<byte offset="575b5a" old="b8" new="6d"/>
+				<byte offset="575b5b" old="b6" new="6f"/>
+				<byte offset="575b5c" old="c7" new="6e"/>
+				<byte offset="575b5d" old="fc" new="0"/>
+				<byte offset="575b50" old="c0" new="44"/>
+				<byte offset="575b51" old="ce" new="65"/>
+				<byte offset="575b52" old="b0" new="6d"/>
+				<byte offset="575b53" old="a3" new="69"/>
+				<byte offset="575b54" old="c7" new="2d"/>
+				<byte offset="575b55" old="fc" new="48"/>
+				<byte offset="575b38" old="b9" new="46"/>
+				<byte offset="575b39" old="ab" new="6f"/>
+				<byte offset="575b3a" old="c7" new="72"/>
+				<byte offset="575b3b" old="fc" new="6d"/>
+				<byte offset="575bac" old="be" new="55"/>
+				<byte offset="575bad" old="f0" new="6e"/>
+				<byte offset="575bae" old="b5" new="64"/>
+				<byte offset="575baf" old="a5" new="65"/>
+				<byte offset="575bb0" old="b5" new="61"/>
+				<byte offset="575bb1" old="e5" new="64"/>
+				<byte offset="575bb2" old="25" new="0"/>
+				<byte offset="575bb3" old="64" new="0"/>
+				<byte offset="575b70" old="bd" new="50"/>
+				<byte offset="575b71" old="c4" new="6c"/>
+				<byte offset="575b72" old="b9" new="61"/>
+				<byte offset="575b73" old="b0" new="6e"/>
+				<byte offset="575b74" old="c7" new="74"/>
+				<byte offset="575b75" old="fc" new="0"/>
+				<byte offset="575b60" old="be" new="46"/>
+				<byte offset="575b61" old="ee" new="69"/>
+				<byte offset="575b62" old="c6" new="73"/>
+				<byte offset="575b63" old="d0" new="68"/>
+				<byte offset="575b64" old="c7" new="0"/>
+				<byte offset="575b65" old="fc" new="0"/>
+				<byte offset="575b78" old="b5" new="42"/>
+				<byte offset="575b79" old="bf" new="72"/>
+				<byte offset="575b7a" old="b9" new="75"/>
+				<byte offset="575b7b" old="b0" new="74"/>
+				<byte offset="575b7c" old="c7" new="65"/>
+				<byte offset="575b7d" old="fc" new="0"/>
+				<byte offset="575b48" old="c3" new="41"/>
+				<byte offset="575b49" old="b5" new="6e"/>
+				<byte offset="575b4a" old="bb" new="67"/>
+				<byte offset="575b4b" old="e7" new="65"/>
+				<byte offset="575b4c" old="c7" new="6c"/>
+				<byte offset="575b4d" old="fc" new="0"/>
+				<byte offset="575b68" old="b0" new="49"/>
+				<byte offset="575b69" old="ef" new="6e"/>
+				<byte offset="575b6a" old="c3" new="73"/>
+				<byte offset="575b6b" old="e6" new="65"/>
+				<byte offset="575b6c" old="c7" new="63"/>
+				<byte offset="575b6d" old="fc" new="74"/>
+				<byte offset="575b40" old="bf" new="44"/>
+				<byte offset="575b41" old="eb" new="72"/>
+				<byte offset="575b42" old="c1" new="61"/>
+				<byte offset="575b43" old="b7" new="67"/>
+				<byte offset="575c22" old="c0" new="4d"/>
+				<byte offset="575c23" old="cf" new="6f"/>
+				<byte offset="575c24" old="b9" new="62"/>
+				<byte offset="575c25" old="dd" new="29"/>
+				<byte offset="575c26" old="29" new="0"/>
+				<byte offset="575c32" old="ba" new="42"/>
+				<byte offset="575c33" old="b8" new="6f"/>
+				<byte offset="575c34" old="bd" new="73"/>
+				<byte offset="575c35" old="ba" new="73"/>
+				<byte offset="5758c4" old="be" new="54"/>
+				<byte offset="5758c5" old="c8" new="6f"/>
+				<byte offset="5758c6" old="b3" new="20"/>
+				<byte offset="5758c7" old="bb" new="66"/>
+				<byte offset="5758c8" old="c7" new="69"/>
+				<byte offset="5758c9" old="cf" new="6e"/>
+				<byte offset="5758ca" old="b4" new="64"/>
+				<byte offset="5758cb" old="c2" new="20"/>
+				<byte offset="5758cc" old="20" new="74"/>
+				<byte offset="5758cd" old="c0" new="68"/>
+				<byte offset="5758ce" old="a7" new="65"/>
+				<byte offset="5758cf" old="c4" new="20"/>
+				<byte offset="5758d0" old="a1" new="6c"/>
+				<byte offset="5758d1" old="b7" new="6f"/>
+				<byte offset="5758d2" old="ce" new="63"/>
+				<byte offset="5758d3" old="20" new="61"/>
+				<byte offset="5758d4" old="c0" new="74"/>
+				<byte offset="5758d5" old="cc" new="69"/>
+				<byte offset="5758d6" old="b5" new="6f"/>
+				<byte offset="5758d7" old="bf" new="6e"/>
+				<byte offset="5758d8" old="c7" new="2c"/>
+				<byte offset="5758d9" old="cf" new="20"/>
+				<byte offset="5758da" old="bd" new="70"/>
+				<byte offset="5758db" old="c3" new="6c"/>
+				<byte offset="5758dc" old="b1" new="65"/>
+				<byte offset="5758dd" old="e2" new="61"/>
+				<byte offset="5758de" old="20" new="73"/>
+				<byte offset="5758df" old="b9" new="65"/>
+				<byte offset="5758e0" old="d9" new="20"/>
+				<byte offset="5758e1" old="b6" new="67"/>
+				<byte offset="5758e2" old="f8" new="6f"/>
+				<byte offset="5758e3" old="b4" new="20"/>
+				<byte offset="5758e4" old="cf" new="74"/>
+				<byte offset="5758e5" old="b4" new="6f"/>
+				<byte offset="5758e6" old="d9" new="0"/>
+				<byte offset="5758e7" old="2e" new="0"/>
+				<byte offset="5758a8" old="b8" new="41"/>
+				<byte offset="5758a9" old="f1" new="72"/>
+				<byte offset="5758aa" old="c7" new="72"/>
+				<byte offset="5758ab" old="a5" new="69"/>
+				<byte offset="5758ac" old="20" new="76"/>
+				<byte offset="5758ad" old="b8" new="65"/>
+				<byte offset="5758ae" old="ca" new="64"/>
+				<byte offset="5758af" old="bf" new="20"/>
+				<byte offset="5758b0" old="a1" new="61"/>
+				<byte offset="5758b1" old="20" new="74"/>
+				<byte offset="5758b2" old="b5" new="20"/>
+				<byte offset="5758b3" old="b5" new="74"/>
+				<byte offset="5758b4" old="c2" new="68"/>
+				<byte offset="5758b5" old="f8" new="65"/>
+				<byte offset="5758b6" old="c7" new="20"/>
+				<byte offset="5758b7" old="cf" new="74"/>
+				<byte offset="5758b8" old="bf" new="61"/>
+				<byte offset="5758b9" old="b4" new="72"/>
+				<byte offset="5758ba" old="bd" new="67"/>
+				<byte offset="5758bb" old="c0" new="65"/>
+				<byte offset="5758bc" old="b4" new="74"/>
+				<byte offset="5758bd" old="cf" new="20"/>
+				<byte offset="5758be" old="b4" new="6d"/>
+				<byte offset="5758bf" old="d9" new="61"/>
+				<byte offset="5758c0" old="2e" new="70"/>
+				<byte offset="575860" old="c3" new="41"/>
+				<byte offset="575861" old="a3" new="72"/>
+				<byte offset="575862" old="b0" new="72"/>
+				<byte offset="575863" old="ed" new="69"/>
+				<byte offset="575864" old="c0" new="76"/>
+				<byte offset="575865" old="da" new="65"/>
+				<byte offset="575866" old="20" new="64"/>
+				<byte offset="575867" old="c7" new="20"/>
+				<byte offset="575868" old="cf" new="6f"/>
+				<byte offset="575869" old="b4" new="6e"/>
+				<byte offset="57586a" old="c2" new="20"/>
+				<byte offset="57586b" old="20" new="74"/>
+				<byte offset="57586c" old="4e" new="68"/>
+				<byte offset="57586d" old="70" new="65"/>
+				<byte offset="57586e" old="63" new="20"/>
+				<byte offset="57586f" old="b0" new="6d"/>
+				<byte offset="575870" old="a1" new="61"/>
+				<byte offset="575871" old="20" new="70"/>
+				<byte offset="575872" old="c0" new="20"/>
+				<byte offset="575873" old="d6" new="74"/>
+				<byte offset="575874" old="b4" new="68"/>
+				<byte offset="575875" old="c2" new="61"/>
+				<byte offset="575876" old="20" new="74"/>
+				<byte offset="575877" old="b8" new="20"/>
+				<byte offset="575878" old="ca" new="68"/>
+				<byte offset="575879" old="bf" new="61"/>
+				<byte offset="57587a" old="a1" new="73"/>
+				<byte offset="57587c" old="b5" new="74"/>
+				<byte offset="57587d" old="b5" new="68"/>
+				<byte offset="57587e" old="c2" new="65"/>
+				<byte offset="57587f" old="f8" new="20"/>
+				<byte offset="575880" old="20" new="4e"/>
+				<byte offset="575881" old="c7" new="70"/>
+				<byte offset="575882" old="cf" new="63"/>
+				<byte offset="575883" old="bf" new="20"/>
+				<byte offset="575884" old="b4" new="79"/>
+				<byte offset="575885" old="bd" new="6f"/>
+				<byte offset="575886" old="c0" new="75"/>
+				<byte offset="575887" old="b4" new="72"/>
+				<byte offset="575888" old="cf" new="20"/>
+				<byte offset="575889" old="b4" new="6c"/>
+				<byte offset="57588a" old="d9" new="6f"/>
+				<byte offset="57588b" old="2e" new="6f"/>
+				<byte offset="57588c" old="20" new="6b"/>
+				<byte offset="57588d" old="4e" new="69"/>
+				<byte offset="57588e" old="70" new="6e"/>
+				<byte offset="57588f" old="63" new="67"/>
+				<byte offset="575890" old="b7" new="20"/>
+				<byte offset="575891" old="ce" new="66"/>
+				<byte offset="575892" old="20" new="6f"/>
+				<byte offset="575893" old="c0" new="72"/>
+				<byte offset="575894" old="cc" new="2e"/>
+				<byte offset="575895" old="b5" new="20"/>
+				<byte offset="575896" old="bf" new="47"/>
+				<byte offset="575897" old="c7" new="6f"/>
+				<byte offset="575898" old="cf" new="20"/>
+				<byte offset="575899" old="bd" new="74"/>
+				<byte offset="57589a" old="c3" new="6f"/>
+				<byte offset="57589b" old="b1" new="20"/>
+				<byte offset="57589c" old="e2" new="74"/>
+				<byte offset="57589d" old="20" new="68"/>
+				<byte offset="57589e" old="b9" new="61"/>
+				<byte offset="57589f" old="d9" new="74"/>
+				<byte offset="5758a0" old="b6" new="20"/>
+				<byte offset="5758a1" old="f8" new="4e"/>
+				<byte offset="5758a2" old="b4" new="50"/>
+				<byte offset="5758a3" old="cf" new="43"/>
+				<byte offset="5758a4" old="b4" new="0"/>
+				<byte offset="5758a5" old="d9" new="0"/>
+				<byte offset="5758a6" old="2e" new="0"/>
+				<byte offset="575a1c" old="b5" new="46"/>
+				<byte offset="575a1d" old="b5" new="61"/>
+				<byte offset="575a1e" old="c2" new="69"/>
+				<byte offset="575a1f" old="f8" new="6c"/>
+				<byte offset="575a20" old="20" new="65"/>
+				<byte offset="575a21" old="c1" new="64"/>
+				<byte offset="575a22" old="f6" new="20"/>
+				<byte offset="575a23" old="c1" new="74"/>
+				<byte offset="575a24" old="a1" new="6f"/>
+				<byte offset="575a25" old="bf" new="20"/>
+				<byte offset="575a26" old="a1" new="73"/>
+				<byte offset="575a27" old="20" new="65"/>
+				<byte offset="575a28" old="b4" new="74"/>
+				<byte offset="575a29" old="eb" new="20"/>
+				<byte offset="575a2a" old="c7" new="69"/>
+				<byte offset="575a2b" old="d1" new="6e"/>
+				<byte offset="575a2c" old="20" new="66"/>
+				<byte offset="575a2d" old="c1" new="6f"/>
+				<byte offset="575a2e" old="a4" new="20"/>
+				<byte offset="575a2f" old="ba" new="66"/>
+				<byte offset="575a30" old="b8" new="6f"/>
+				<byte offset="575a31" old="20" new="72"/>
+				<byte offset="575a32" old="bc" new="20"/>
+				<byte offset="575a33" old="b3" new="6c"/>
+				<byte offset="575a34" old="c1" new="6f"/>
+				<byte offset="575a35" old="a4" new="63"/>
+				<byte offset="575a36" old="20" new="61"/>
+				<byte offset="575a37" old="bd" new="74"/>
+				<byte offset="575a38" old="c7" new="69"/>
+				<byte offset="575a39" old="c6" new="6f"/>
+				<byte offset="575a3a" old="d0" new="6e"/>
+				<byte offset="575988" old="b8" new="50"/>
+				<byte offset="575989" old="f1" new="6c"/>
+				<byte offset="57598a" old="c7" new="65"/>
+				<byte offset="57598b" old="a5" new="61"/>
+				<byte offset="57598c" old="b8" new="73"/>
+				<byte offset="57598d" old="a6" new="65"/>
+				<byte offset="57598f" old="c1" new="73"/>
+				<byte offset="575990" old="f6" new="70"/>
+				<byte offset="575991" old="c1" new="65"/>
+				<byte offset="575992" old="a4" new="63"/>
+				<byte offset="575993" old="20" new="69"/>
+				<byte offset="575994" old="c7" new="66"/>
+				<byte offset="575995" old="cf" new="79"/>
+				<byte offset="575996" old="bd" new="20"/>
+				<byte offset="575997" old="c3" new="74"/>
+				<byte offset="575998" old="b1" new="61"/>
+				<byte offset="575999" old="e2" new="72"/>
+				<byte offset="57599a" old="20" new="67"/>
+				<byte offset="57599b" old="b9" new="65"/>
+				<byte offset="57599c" old="d9" new="74"/>
+				<byte offset="57599d" old="b6" new="20"/>
+				<byte offset="57599e" old="f8" new="67"/>
+				<byte offset="57599f" old="b4" new="6f"/>
+				<byte offset="5759a0" old="cf" new="61"/>
+				<byte offset="5759a1" old="b4" new="6c"/>
+				<byte offset="5759a2" old="d9" new="73"/>
+				<byte offset="57593c" old="c3" new="49"/>
+				<byte offset="57593d" old="a3" new="73"/>
+				<byte offset="57593e" old="b0" new="20"/>
+				<byte offset="57593f" old="ed" new="74"/>
+				<byte offset="575940" old="c0" new="68"/>
+				<byte offset="575941" old="da" new="65"/>
+				<byte offset="575943" old="c7" new="6d"/>
+				<byte offset="575944" old="cf" new="61"/>
+				<byte offset="575945" old="b4" new="70"/>
+				<byte offset="575946" old="c2" new="20"/>
+				<byte offset="575947" old="20" new="74"/>
+				<byte offset="575948" old="b8" new="68"/>
+				<byte offset="575949" old="f3" new="61"/>
+				<byte offset="57594a" old="bd" new="74"/>
+				<byte offset="57594b" old="ba" new="20"/>
+				<byte offset="57594c" old="c5" new="79"/>
+				<byte offset="57594d" old="cd" new="6f"/>
+				<byte offset="57594e" old="b0" new="75"/>
+				<byte offset="57594f" old="a1" new="72"/>
+				<byte offset="575951" old="c0" new="6c"/>
+				<byte offset="575952" old="d6" new="6f"/>
+				<byte offset="575953" old="b4" new="6f"/>
+				<byte offset="575954" old="c2" new="6b"/>
+				<byte offset="575955" old="20" new="69"/>
+				<byte offset="575956" old="b8" new="6e"/>
+				<byte offset="575957" old="ca" new="67"/>
+				<byte offset="575959" old="c0" new="66"/>
+				<byte offset="57595a" old="d4" new="6f"/>
+				<byte offset="57595b" old="b4" new="72"/>
+				<byte offset="57595c" old="cf" new="20"/>
+				<byte offset="57595d" old="b4" new="6d"/>
+				<byte offset="57595e" old="d9" new="6f"/>
+				<byte offset="57595f" old="2e" new="62"/>
+				<byte offset="575964" old="b1" new="44"/>
+				<byte offset="575965" old="e6" new="69"/>
+				<byte offset="575966" old="20" new="72"/>
+				<byte offset="575967" old="be" new="65"/>
+				<byte offset="575968" old="c8" new="63"/>
+				<byte offset="575969" old="b3" new="74"/>
+				<byte offset="57596a" old="bb" new="69"/>
+				<byte offset="57596b" old="b0" new="6f"/>
+				<byte offset="57596c" old="a1" new="6e"/>
+				<byte offset="57596d" old="20" new="73"/>
+				<byte offset="57596e" old="bd" new="20"/>
+				<byte offset="57596f" old="c3" new="77"/>
+				<byte offset="575970" old="c0" new="65"/>
+				<byte offset="575971" old="db" new="72"/>
+				<byte offset="575972" old="20" new="65"/>
+				<byte offset="575973" old="b5" new="20"/>
+				<byte offset="575974" old="c7" new="73"/>
+				<byte offset="575975" old="be" new="74"/>
+				<byte offset="575976" old="fa" new="61"/>
+				<byte offset="575977" old="bd" new="72"/>
+				<byte offset="575978" old="c0" new="74"/>
+				<byte offset="575979" old="b4" new="65"/>
+				<byte offset="57597a" old="cf" new="64"/>
+				<byte offset="57597b" old="b4" new="0"/>
+				<byte offset="57597c" old="d9" new="0"/>
+				<byte offset="57570a" old="ba" new="50"/>
+				<byte offset="57570b" old="f1" new="6c"/>
+				<byte offset="57570c" old="b0" new="65"/>
+				<byte offset="57570d" old="f8" new="61"/>
+				<byte offset="57570e" old="c1" new="73"/>
+				<byte offset="57570f" old="a4" new="65"/>
+				<byte offset="575710" old="c0" new="20"/>
+				<byte offset="575711" old="b8" new="67"/>
+				<byte offset="575712" old="b7" new="6f"/>
+				<byte offset="575713" old="ce" new="20"/>
+				<byte offset="575714" old="20" new="74"/>
+				<byte offset="575715" old="c0" new="6f"/>
+				<byte offset="575716" old="cc" new="20"/>
+				<byte offset="575717" old="b5" new="74"/>
+				<byte offset="575718" old="bf" new="68"/>
+				<byte offset="575719" old="20" new="65"/>
+				<byte offset="57571a" old="c7" new="20"/>
+				<byte offset="57571b" old="cf" new="61"/>
+				<byte offset="57571c" old="bd" new="69"/>
+				<byte offset="57571d" old="c3" new="72"/>
+				<byte offset="57571e" old="b1" new="73"/>
+				<byte offset="57571f" old="e2" new="68"/>
+				<byte offset="575720" old="20" new="69"/>
+				<byte offset="575721" old="b9" new="70"/>
+				<byte offset="575722" old="d9" new="0"/>
+				<byte offset="575723" old="b6" new="0"/>
+				<byte offset="575724" old="f8" new="0"/>
+				<byte offset="575725" old="b4" new="0"/>
+				<byte offset="575726" old="cf" new="0"/>
+				<byte offset="575727" old="b4" new="0"/>
+				<byte offset="575728" old="d9" new="0"/>
+				<byte offset="575772" old="b8" new="28"/>
+				<byte offset="575773" old="ca" new="25"/>
+				<byte offset="575774" old="28" new="73"/>
+				<byte offset="575775" old="25" new="29"/>
+				<byte offset="575776" old="73" new="20"/>
+				<byte offset="575777" old="29" new="6d"/>
+				<byte offset="575778" old="c0" new="61"/>
+				<byte offset="575779" old="b8" new="70"/>
+				<byte offset="57577a" old="b7" new="2c"/>
+				<byte offset="57577b" old="ce" new="20"/>
+				<byte offset="57577c" old="20" new="70"/>
+				<byte offset="57577d" old="c0" new="6c"/>
+				<byte offset="57577e" old="cc" new="65"/>
+				<byte offset="57577f" old="b5" new="61"/>
+				<byte offset="575780" old="bf" new="73"/>
+				<byte offset="575781" old="c7" new="65"/>
+				<byte offset="575782" old="cf" new="20"/>
+				<byte offset="575783" old="bd" new="6d"/>
+				<byte offset="575784" old="c3" new="6f"/>
+				<byte offset="575785" old="b1" new="76"/>
+				<byte offset="575786" old="e2" new="65"/>
+				<byte offset="575788" old="b9" new="74"/>
+				<byte offset="575789" old="d9" new="6f"/>
+				<byte offset="57578a" old="b6" new="0"/>
+				<byte offset="57578b" old="f8" new="0"/>
+				<byte offset="57578c" old="b4" new="0"/>
+				<byte offset="57578d" old="cf" new="0"/>
+				<byte offset="57578e" old="b4" new="0"/>
+				<byte offset="57578f" old="d9" new="0"/>
+				<byte offset="5757a2" old="be" new="47"/>
+				<byte offset="5757a3" old="c8" new="75"/>
+				<byte offset="5757a4" old="b3" new="69"/>
+				<byte offset="5757a5" old="bb" new="64"/>
+				<byte offset="5757a6" old="c7" new="61"/>
+				<byte offset="5757a7" old="cf" new="6e"/>
+				<byte offset="5757a8" old="b4" new="63"/>
+				<byte offset="5757a9" old="c2" new="65"/>
+				<byte offset="5757ab" old="25" new="74"/>
+				<byte offset="5757ac" old="73" new="6f"/>
+				<byte offset="5757ad" old="28" new="20"/>
+				<byte offset="5757ae" old="c0" new="25"/>
+				<byte offset="5757af" old="bb" new="73"/>
+				<byte offset="5757b0" old="29" new="20"/>
+				<byte offset="5757b1" old="b8" new="28"/>
+				<byte offset="5757b2" old="a6" new="41"/>
+				<byte offset="5757b3" old="20" new="29"/>
+				<byte offset="5757b4" old="c0" new="20"/>
+				<byte offset="5757b5" old="cc" new="42"/>
+				<byte offset="5757b6" old="bf" new="79"/>
+				<byte offset="5757b7" old="eb" new="20"/>
+				<byte offset="5757b8" old="c7" new="75"/>
+				<byte offset="5757b9" old="cf" new="73"/>
+				<byte offset="5757ba" old="bf" new="69"/>
+				<byte offset="5757bb" old="a9" new="6e"/>
+				<byte offset="5757bc" old="0" new="67"/>
+				<byte offset="5760ac" old="be" new="44"/>
+				<byte offset="5760ad" old="c8" new="6f"/>
+				<byte offset="5760ae" old="b3" new="20"/>
+				<byte offset="5760af" old="bb" new="79"/>
+				<byte offset="5760b0" old="c1" new="6f"/>
+				<byte offset="5760b1" old="df" new="75"/>
+				<byte offset="5760b3" old="c0" new="77"/>
+				<byte offset="5760b4" old="d4" new="61"/>
+				<byte offset="5760b5" old="b4" new="6e"/>
+				<byte offset="5760b6" old="cf" new="74"/>
+				<byte offset="5760b7" old="b4" new="20"/>
+				<byte offset="5760b8" old="d9" new="74"/>
+				<byte offset="5760b9" old="21" new="6f"/>
+				<byte offset="5760bb" old="c1" new="63"/>
+				<byte offset="5760bc" old="be" new="61"/>
+				<byte offset="5760bd" old="b7" new="6e"/>
+				<byte offset="5760be" old="e1" new="63"/>
+				<byte offset="5760bf" old="20" new="65"/>
+				<byte offset="5760c0" old="c7" new="6c"/>
+				<byte offset="5760c1" old="cf" new="20"/>
+				<byte offset="5760c2" old="bd" new="6e"/>
+				<byte offset="5760c3" old="c3" new="61"/>
+				<byte offset="5760c4" old="b0" new="76"/>
+				<byte offset="5760c5" old="da" new="69"/>
+				<byte offset="5760c6" old="bd" new="67"/>
+				<byte offset="5760c7" old="c0" new="61"/>
+				<byte offset="5760c8" old="b4" new="74"/>
+				<byte offset="5760c9" old="cf" new="69"/>
+				<byte offset="5760ca" old="b1" new="6f"/>
+				<byte offset="5760cb" old="ee" new="6e"/>
+				<byte offset="57629c" old="b4" new="55"/>
+				<byte offset="57629d" old="f8" new="73"/>
+				<byte offset="57629e" old="c0" new="65"/>
+				<byte offset="57629f" old="fc" new="20"/>
+				<byte offset="5762a0" old="c0" new="53"/>
+				<byte offset="5762a1" old="cc" new="63"/>
+				<byte offset="5762a2" old="b5" new="72"/>
+				<byte offset="5762a3" old="bf" new="6f"/>
+				<byte offset="5762a4" old="20" new="6c"/>
+				<byte offset="5762a5" old="bd" new="6c"/>
+				<byte offset="5762a6" old="ba" new="20"/>
+				<byte offset="5762a7" old="c5" new="3f"/>
+				<byte offset="5762a8" old="a9" new="0"/>
+				<byte offset="5762a9" old="b7" new="0"/>
+				<byte offset="5762aa" old="d1" new="0"/>
+				<byte offset="5762ab" old="20" new="0"/>
+				<byte offset="5762ac" old="bb" new="0"/>
+				<byte offset="5762ad" old="e7" new="0"/>
+				<byte offset="5762ae" old="bf" new="0"/>
+				<byte offset="5762af" old="eb" new="0"/>
+				<byte offset="5762b0" old="20" new="0"/>
+				<byte offset="5762b1" old="c0" new="0"/>
+				<byte offset="5762b2" old="fb" new="0"/>
+				<byte offset="5762b3" old="bf" new="0"/>
+				<byte offset="5762b4" old="eb" new="0"/>
+				<byte offset="576284" old="c0" new="55"/>
+				<byte offset="576285" old="a7" new="73"/>
+				<byte offset="576286" old="c4" new="65"/>
+				<byte offset="576287" old="a1" new="20"/>
+				<byte offset="576288" old="20" new="4b"/>
+				<byte offset="576289" old="c0" new="61"/>
+				<byte offset="57628a" old="cc" new="66"/>
+				<byte offset="57628b" old="b5" new="72"/>
+				<byte offset="57628c" old="bf" new="61"/>
+				<byte offset="57628e" old="bc" new="57"/>
+				<byte offset="57628f" old="ad" new="61"/>
+				<byte offset="576290" old="ba" new="72"/>
+				<byte offset="576291" old="f1" new="70"/>
+				<byte offset="576292" old="bd" new="20"/>
+				<byte offset="576293" old="ba" new="3f"/>
+				<byte offset="576294" old="20" new="0"/>
+				<byte offset="576295" old="c7" new="0"/>
+				<byte offset="576296" old="e3" new="0"/>
+				<byte offset="576297" old="bf" new="0"/>
+				<byte offset="576298" old="eb" new="0"/>
+				<byte offset="576268" old="ba" new="55"/>
+				<byte offset="576269" old="f1" new="73"/>
+				<byte offset="57626a" old="b0" new="65"/>
+				<byte offset="57626b" old="f8" new="20"/>
+				<byte offset="57626c" old="c1" new="41"/>
+				<byte offset="57626d" old="a4" new="69"/>
+				<byte offset="57626e" old="20" new="72"/>
+				<byte offset="57626f" old="c0" new="73"/>
+				<byte offset="576270" old="cc" new="68"/>
+				<byte offset="576271" old="b5" new="69"/>
+				<byte offset="576272" old="bf" new="70"/>
+				<byte offset="576274" old="c0" new="3f"/>
+				<byte offset="576275" old="fb" new="0"/>
+				<byte offset="576276" old="bf" new="0"/>
+				<byte offset="576277" old="eb" new="0"/>
+				<byte offset="575980" old="b5" new="46"/>
+				<byte offset="575981" old="b5" new="6f"/>
+				<byte offset="575982" old="c2" new="75"/>
+				<byte offset="575983" old="f8" new="6e"/>
+				<byte offset="575984" old="2e" new="64"/>
+				<byte offset="56a2cc" old="a1" new="59"/>
+				<byte offset="56a2cd" old="da" new="6f"/>
+				<byte offset="56a2ce" old="0" new="75"/>
+				<byte offset="575a0c" old="b1" new="50"/>
+				<byte offset="575a0d" old="e6" new="61"/>
+				<byte offset="575a0e" old="20" new="74"/>
+				<byte offset="575a0f" old="c3" new="68"/>
+				<byte offset="575a10" old="a3" new="20"/>
+				<byte offset="575a11" old="b1" new="46"/>
+				<byte offset="575a12" old="e2" new="61"/>
+				<byte offset="575a13" old="20" new="69"/>
+				<byte offset="575a14" old="bd" new="6c"/>
+				<byte offset="575a15" old="c7" new="75"/>
+				<byte offset="575a16" old="c6" new="72"/>
+				<byte offset="575a17" old="d0" new="65"/>
+				<byte offset="576134" old="b1" new="47"/>
+				<byte offset="576135" old="e6" new="75"/>
+				<byte offset="576136" old="20" new="69"/>
+				<byte offset="576137" old="be" new="64"/>
+				<byte offset="576138" old="c8" new="61"/>
+				<byte offset="576139" old="b3" new="6e"/>
+				<byte offset="57613a" old="bb" new="63"/>
+				<byte offset="57613b" old="20" new="65"/>
+				<byte offset="57613c" old="c1" new="20"/>
+				<byte offset="57613d" old="a4" new="3d"/>
+				<byte offset="57613e" old="ba" new="3d"/>
+				<byte offset="57613f" old="b8" new="3d"/>
+				<byte offset="576140" old="20" new="3d"/>
+				<byte offset="576144" old="3d" new="0"/>
+				<byte offset="576145" old="3d" new="0"/>
+				<byte offset="576146" old="3d" new="0"/>
+				<byte offset="576147" old="3d" new="0"/>
+				<byte offset="57615c" old="b8" new="47"/>
+				<byte offset="57615d" old="f1" new="6f"/>
+				<byte offset="57615e" old="c7" new="61"/>
+				<byte offset="57615f" old="a5" new="6c"/>
+				<byte offset="576161" old="20" new="3a"/>
+				<byte offset="576162" old="20" new="0"/>
+				<byte offset="576163" old="3a" new="0"/>
+				<byte offset="576190" old="b8" new="43"/>
+				<byte offset="576191" old="f1" new="6f"/>
+				<byte offset="576192" old="c7" new="6f"/>
+				<byte offset="576193" old="a5" new="72"/>
+				<byte offset="576194" old="b8" new="64"/>
+				<byte offset="576195" old="ca" new="73"/>
+				<byte offset="576196" old="3a" new="20"/>
+				<byte offset="576197" old="20" new="25"/>
+				<byte offset="576198" old="25" new="73"/>
+				<byte offset="576199" old="73" new="28"/>
+				<byte offset="57619a" old="28" new="25"/>
+				<byte offset="57619b" old="25" new="73"/>
+				<byte offset="57619c" old="73" new="29"/>
+				<byte offset="57619d" old="29" new="0"/>
+				<byte offset="5761c9" old="b0" new="52"/>
+				<byte offset="5761ca" old="e1" new="65"/>
+				<byte offset="5761cb" old="b0" new="73"/>
+				<byte offset="5761cc" old="fa" new="75"/>
+				<byte offset="5761cd" old="20" new="6c"/>
+				<byte offset="5761ce" old="c1" new="74"/>
+				<byte offset="5761cf" old="a4" new="73"/>
+				<byte offset="5761d0" old="ba" new="20"/>
+				<byte offset="5761d1" old="b8" new="3d"/>
+				<byte offset="5761d2" old="20" new="3d"/>
+				<byte offset="5761db" old="3d" new="0"/>
+				<byte offset="5761dc" old="3d" new="0"/>
+				<byte offset="5761a0" old="b0" new="44"/>
+				<byte offset="5761a1" old="c5" new="69"/>
+				<byte offset="5761a2" old="b8" new="73"/>
+				<byte offset="5761a3" old="ae" new="74"/>
+				<byte offset="5761a6" old="20" new="25"/>
+				<byte offset="5761a7" old="3a" new="64"/>
+				<byte offset="5761a9" old="25" new="43"/>
+				<byte offset="5761aa" old="64" new="65"/>
+				<byte offset="5761ab" old="20" new="6c"/>
+				<byte offset="5761ac" old="53" new="6c"/>
+				<byte offset="5761ad" old="65" new="20"/>
+				<byte offset="5761ae" old="6c" new="25"/>
+				<byte offset="5761af" old="6c" new="64"/>
+				<byte offset="5761b1" old="25" new="57"/>
+				<byte offset="5761b2" old="64" new="61"/>
+				<byte offset="5761b3" old="20" new="72"/>
+				<byte offset="5761b4" old="57" new="70"/>
+				<byte offset="5761b5" old="61" new="4d"/>
+				<byte offset="5761b6" old="72" new="6f"/>
+				<byte offset="5761b7" old="70" new="76"/>
+				<byte offset="5761b8" old="4d" new="65"/>
+				<byte offset="5761b9" old="6f" new="0"/>
+				<byte offset="5761ba" old="76" new="0"/>
+				<byte offset="5761bb" old="65" new="0"/>
+				<byte offset="5761ff" old="0" new="3d"/>
+				<byte offset="576201" old="3d" new="20"/>
+				<byte offset="576202" old="20" new="46"/>
+				<byte offset="576203" old="b0" new="6f"/>
+				<byte offset="576204" old="cb" new="75"/>
+				<byte offset="576205" old="bb" new="6e"/>
+				<byte offset="576206" old="f6" new="64"/>
+				<byte offset="576208" old="b0" new="28"/>
+				<byte offset="576209" old="e1" new="25"/>
+				<byte offset="57620a" old="b0" new="64"/>
+				<byte offset="57620b" old="fa" new="29"/>
+				<byte offset="57620c" old="28" new="20"/>
+				<byte offset="57620d" old="25" new="3d"/>
+				<byte offset="57620e" old="64" new="3d"/>
+				<byte offset="57620f" old="29" new="0"/>
+				<byte offset="576210" old="3d" new="0"/>
+				<byte offset="576211" old="3d" new="0"/>
+				<byte offset="5757e8" old="b0" new="50"/>
+				<byte offset="5757e9" old="a1" new="6c"/>
+				<byte offset="5757ea" old="b8" new="65"/>
+				<byte offset="5757eb" old="ae" new="61"/>
+				<byte offset="5757ec" old="c5" new="73"/>
+				<byte offset="5757ed" old="b0" new="65"/>
+				<byte offset="5757ee" old="b4" new="20"/>
+				<byte offset="5757ef" old="c2" new="67"/>
+				<byte offset="5757f0" old="20" new="6f"/>
+				<byte offset="5757f1" old="b9" new="20"/>
+				<byte offset="5757f2" old="e6" new="74"/>
+				<byte offset="5757f3" old="c7" new="6f"/>
+				<byte offset="5757f4" old="e2" new="20"/>
+				<byte offset="5757f5" old="c0" new="69"/>
+				<byte offset="5757f6" old="b8" new="6e"/>
+				<byte offset="5757f7" old="b7" new="64"/>
+				<byte offset="5757f8" old="ce" new="69"/>
+				<byte offset="5757f9" old="20" new="63"/>
+				<byte offset="5757fa" old="b0" new="61"/>
+				<byte offset="5757fb" old="a1" new="74"/>
+				<byte offset="5757fc" old="bd" new="65"/>
+				<byte offset="5757fd" old="c3" new="64"/>
+				<byte offset="5757fe" old="b1" new="20"/>
+				<byte offset="5757ff" old="e2" new="64"/>
+				<byte offset="575800" old="20" new="69"/>
+				<byte offset="575801" old="b9" new="72"/>
+				<byte offset="575802" old="d9" new="65"/>
+				<byte offset="575803" old="b6" new="63"/>
+				<byte offset="575804" old="f8" new="74"/>
+				<byte offset="575805" old="b4" new="69"/>
+				<byte offset="575806" old="cf" new="6f"/>
+				<byte offset="575807" old="b4" new="6e"/>
+				<byte offset="575808" old="d9" new="2e"/>
+				<byte offset="575809" old="2e" new="0"/>
+				<byte offset="57622f" old="b0" new="47"/>
+				<byte offset="576230" old="cb" new="6f"/>
+				<byte offset="576231" old="bb" new="61"/>
+				<byte offset="576232" old="f6" new="6c"/>
+				<byte offset="576233" old="c1" new="2e"/>
+				<byte offset="576234" old="df" new="2e"/>
+				<byte offset="576236" old="2e" new="20"/>
+				<byte offset="576237" old="2e" new="3e"/>
+				<byte offset="576238" old="20" new="3e"/>
+				<byte offset="576239" old="3e" new="0"/>
+				<byte offset="57623a" old="3e" new="0"/>
+				<byte offset="57614c" old="b8" new="47"/>
+				<byte offset="57614d" old="f1" new="6f"/>
+				<byte offset="57614e" old="c7" new="61"/>
+				<byte offset="57614f" old="a5" new="6c"/>
+			</changes>
+		</patch>
+		<patch id="51" name="Ascii &amp; Arial on All Langtypes" type="UI">
+			<desc>Makes Arial the default font on all Langtypes (it s enable ascii by default</desc>
+			<changes>
+				<byte offset="b2e8" old="77" new="eb"/>
+				<byte offset="b2e9" old="52" new="c"/>
+			</changes>
+		</patch>
+		<patch id="45" name="Use Custom Aura Sprites" type="Data">
+			<desc>This option will make it so your warp portals will not be affected by your aura sprites.&#13;
+If you enable this feature, you will have to make aurafloat.tga and auraring.bmp and&#13;
+place them in your '.\data\texture\effect' folder.&#13;
+&#13;
+Enable this to used aurafloat.tga, auraring.bmp and freezing_circle.bmp as aura sprites.&#13;
+The default aura files are pikapika2.bmp, blue_ring.tga and freezing_circle.bmp.</desc>
+			<changes>
+				<byte offset="2ad22" old="10" new="0"/>
+				<byte offset="2ad23" old="ed" new="0"/>
+				<byte offset="2ad24" old="95" new="0"/>
+				<byte offset="2ad25" old="0" new="0"/>
+				<byte offset="2ad26" old="c6" new="0"/>
+				<byte offset="2ad27" old="1" new="0"/>
+				<byte offset="2ad28" old="0" new="0"/>
+				<byte offset="2616f8" old="58" new="0"/>
+				<byte offset="2616f9" old="e7" new="0"/>
+				<byte offset="2616fa" old="98" new="0"/>
+				<byte offset="2616fb" old="0" new="0"/>
+				<byte offset="2616fc" old="c6" new="0"/>
+				<byte offset="2616fd" old="1" new="0"/>
+				<byte offset="2616fe" old="0" new="0"/>
+				<byte offset="55b009" old="0" new="65"/>
+				<byte offset="55b00a" old="0" new="66"/>
+				<byte offset="55b00b" old="0" new="66"/>
+				<byte offset="55b00c" old="0" new="65"/>
+				<byte offset="55b00d" old="0" new="63"/>
+				<byte offset="55b00e" old="0" new="74"/>
+				<byte offset="55b00f" old="0" new="5c"/>
+				<byte offset="55b010" old="0" new="61"/>
+				<byte offset="55b011" old="0" new="75"/>
+				<byte offset="55b012" old="0" new="72"/>
+				<byte offset="55b013" old="0" new="61"/>
+				<byte offset="55b014" old="0" new="66"/>
+				<byte offset="55b015" old="0" new="6c"/>
+				<byte offset="55b016" old="0" new="6f"/>
+				<byte offset="55b017" old="0" new="61"/>
+				<byte offset="55b018" old="0" new="74"/>
+				<byte offset="55b019" old="0" new="2e"/>
+				<byte offset="55b01a" old="0" new="74"/>
+				<byte offset="55b01b" old="0" new="67"/>
+				<byte offset="55b01c" old="0" new="61"/>
+				<byte offset="55b01e" old="0" new="65"/>
+				<byte offset="55b01f" old="0" new="66"/>
+				<byte offset="55b020" old="0" new="66"/>
+				<byte offset="55b021" old="0" new="65"/>
+				<byte offset="55b022" old="0" new="63"/>
+				<byte offset="55b023" old="0" new="74"/>
+				<byte offset="55b024" old="0" new="5c"/>
+				<byte offset="55b025" old="0" new="61"/>
+				<byte offset="55b026" old="0" new="75"/>
+				<byte offset="55b027" old="0" new="72"/>
+				<byte offset="55b028" old="0" new="61"/>
+				<byte offset="55b029" old="0" new="72"/>
+				<byte offset="55b02a" old="0" new="69"/>
+				<byte offset="55b02b" old="0" new="6e"/>
+				<byte offset="55b02c" old="0" new="67"/>
+				<byte offset="55b02d" old="0" new="2e"/>
+				<byte offset="55b02e" old="0" new="62"/>
+				<byte offset="55b02f" old="0" new="6d"/>
+				<byte offset="55b030" old="0" new="70"/>
+				<byte offset="55b032" old="0" new="90"/>
+			</changes>
+		</patch>
+		<patch id="46" name="Use Normal Guild Brackets" type="UI">
+			<desc>On langtype 0, instead of square-brackets, japanese style brackets are used, this option reverts that behaviour to the normal square brackets (&quot;[&quot; and&quot;]&quot;).</desc>
+			<changes>
+				<byte offset="56042e" old="a1" new="20"/>
+				<byte offset="56042f" old="ba" new="28"/>
+				<byte offset="560432" old="a1" new="29"/>
+				<byte offset="560433" old="bb" new="0"/>
+			</changes>
+		</patch>
+		<patch id="48" name="Use Plain Text Descriptions" type="Data">
+			<desc>Signals that the contents of text files are text files, not encoded.</desc>
+			<changes>
+				<byte offset="2290fa" old="75" new="eb"/>
+			</changes>
+		</patch>
+		<patch id="47" name="Use Ragnarok Icon" type="UI">
+			<desc>Makes the hexed client use the RO program icon instead of the generic Win32 app icon.</desc>
+			<changes>
+				<byte offset="639cc4" old="d0" new="e8"/>
+			</changes>
+		</patch>
+		<patch id="54" name="eXtract MsgStringTable.txt" type="Yom">
+			<desc></desc>
+			<changes/>
+		</patch>
+		<patch id="62" name="eXtract txt file strings" type="Yom">
+			<desc></desc>
+			<changes/>
+		</patch>
+	</patches>
+</diff>
